@@ -69,7 +69,7 @@ const Mentor = () => {
       <main className="grid sm:grid-cols-3 grid-cols-1 gap-[30px] px-[50px]">
         {mentors.map((mentor) => {
           return (
-            <div className="flex flex-col rounded-full justify-center items-center">
+            <div key={mentor.id} className="flex flex-col rounded-full justify-center items-center">
               <div>
                 <Image
                   src="/image1.jpg"

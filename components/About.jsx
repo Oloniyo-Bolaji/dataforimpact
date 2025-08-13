@@ -11,27 +11,43 @@ const montserrat = Montserrat({
 
 const About = () => {
   return (
-    <div className="lg:px-[40px] sm:px-[30px] px-[20px] py-[40px] flex lg:flex-row sm:flex-col flex-col gap-[20px]">
-      <div className="w-[50%] flex items-center flex-col">
-        <h3
-          className={`${montserrat.className} text-[30px] font-bold bg-gradient-to-b from-[#008080] via-[#7a7a7a] to-[#00274D] bg-clip-text text-transparent`}
-        >
-          About Us
-        </h3>
-        <p className="text-[#7a7a7a] text-center leading-[25px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur
-          orci vel lectus cursus, vel ultrices tortor interdum. Aenean bibendum
-          orci eu gravida vulputate. Integer dignissim magna sit amet purus
-          suscipit, a faucibus erat mattis.Aenean bibendum orci eu gravida
-          vulputate. Integer dignissim magna sit amet purus suscipit, a faucibus
-          erat mattis. Quisque fermentum pretium risus sed luctus. Integer id
-          pretium nunc. Nam venenatis enim et odio laoreet, sed eleifend mauris
-          condimentum.
-        </p>
-      </div>
-      <div className="w-[50%] flex justify-center items-center h-full">
-        <div className="border border-[red] ">
-          <div className="hexagon"></div>
+    <div className="py-[40px] flex flex-col gap-[20px]">
+      <h3
+        className={`${montserrat.className} text-[30px] text-center font-bold bg-gradient-to-b from-[#008080] via-[#7a7a7a] to-[#00274D] bg-clip-text text-transparent`}
+      >
+        About Us
+      </h3>
+      <div className="lg:px-[40px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col">
+        <div className="sm:w-[50%] w-full flex items-center flex-col">
+          <div>
+            {/**mission statement */}
+            <div>
+              <h4>Our mission statement</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                efficitur orci vel lectus cursus, vel ultrices tortor interdum.
+                Aenean bibendum orci eu gravida vulputate. Integer dignissim
+                magna sit amet purus suscipit, a faucibus erat mattis.Aenean
+                bibendum orci eu gravida vulputate.
+              </p>
+            </div>
+            {/**vision statement */}
+            <div>
+              <h4>Our vision statement</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                efficitur orci vel lectus cursus, vel ultrices tortor interdum.
+                Aenean bibendum orci eu gravida vulputate. Integer dignissim
+                magna sit amet purus suscipit, a faucibus erat mattis.Aenean
+                bibendum orci eu gravida vulputate.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="sm:w-[50%] w-full flex justify-center items-center h-full">
+          <div className="border border-[red] ">
+            <div className="hexagon"></div>
+          </div>
         </div>
       </div>
     </div>

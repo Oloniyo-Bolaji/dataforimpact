@@ -37,7 +37,7 @@ const Hero = () => {
 
   return (
     <div className="lg:h-screen sm:h-screen h-[580px] my-background p-[10px]">
-      <div className="hero flex justify-between items-center lg:flex-row flex-col lg:px-[60px] sm:px-[30px] px-[15px] h-full">
+      <div className="hero flex lg:justify-between justify-center items-center lg:flex-row flex-col lg:px-[60px] sm:px-[30px] px-[15px] h-full">
         <div className="max-w-lg flex flex-col gap-[10px] lg:items-start sm:items-center items-center lg:text-left  sm:text-center text-center">
           <h1
             className={`${montserrat.className} sm:text-[50px] text-[35px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[50px] leading-[35px]`}
@@ -49,7 +49,7 @@ const Hero = () => {
             </span>{" "}
             Skills That Get You Hired
           </h1>
-          <p className="text-[16px] ">
+          <p className="sm:text-[16px] text-[13px] text-[#7a7a7a]">
             Hands-on data training with real-world projects; Flexible,
             beginner-friendly, and industry-focused.Get Taught and Mentored by
             experienced analysts and data scientists.
