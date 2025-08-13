@@ -51,7 +51,7 @@ const Hero = () => {
           </h1>
           <p className="sm:text-[16px] text-[13px] text-[#7a7a7a]">
             Hands-on data training with real-world projects; Flexible,
-            beginner-friendly, and industry-focused.Get Taught and Mentored by
+            beginner-friendly, and industry-focused. Get Taught and Mentored by
             experienced analysts and data scientists.
           </p>
           <a

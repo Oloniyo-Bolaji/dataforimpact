@@ -5,6 +5,14 @@ import { FaLaptop, FaCertificate } from "react-icons/fa";
 import { MdWorkOutline } from "react-icons/md";
 import { IoPeopleOutline } from "react-icons/io5";
 import { RiUserStarLine } from "react-icons/ri";
+import { Montserrat } from "next/font/google";
+
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
 
 const Service = () => {
   const services = [
@@ -47,17 +55,27 @@ const Service = () => {
   ];
   return (
     <div className="py-[20px] px-[30px]">
-      <h3 className="text-center text-[30px] text-[#00274d] my-[10px]">What we do?</h3>
+      <h3
+        className={`${montserrat.className} text-[30px] text-center font-bold bg-gradient-to-b from-[#008080] via-[#7a7a7a] to-[#00274D] bg-clip-text text-transparent uppercase`}
+      >
+        What we offer?
+      </h3>
       <div className="grid sm:grid-cols-3 grid-cols-1 gap-[20px]">
         {services.map((service, index) => {
           return (
             <div key={index} className="flex gap-[10px] w-full">
               <div className="w-[20%] flex justify-center items-center">
-                <span className="border-[3px] rounded-full border-[#008080] p-[20px] text-[#008080] sm:text-[30px] text-[20px] font-bold">{service.icons}</span>
+                <span className="border-[3px] rounded-full border-[#008080] p-[20px] text-[#008080] sm:text-[30px] text-[20px] font-bold">
+                  {service.icons}
+                </span>
               </div>
               <div className="w-[80%]">
-                <h3 className="uppercase text-[15px] text-[#00274d]">{service.service}</h3>
-                <p className="leading-[20px] text-[14px] text-[#00274d]">{service.description}</p>
+                <h3 className={`${montserrat.className} uppercase text-[15px] text-[#00274d]`}>
+                  {service.service}
+                </h3>
+                <p className="leading-[20px] text-[14px] text-[#00274d]">
+                  {service.description}
+                </p>
               </div>
             </div>
           );
