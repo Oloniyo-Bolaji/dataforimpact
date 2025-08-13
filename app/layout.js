@@ -1,19 +1,23 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Roboto } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
-  title: "Data for Impact",
+  title: "Data for Impact -...touching lives we may never meet",
   icons: {
     icon: "/favicon.png",
   },
-  description: "...touching lives we may never meet",
+  description: "",
 };
 
 export default function RootLayout({ children }) {
@@ -22,9 +26,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
-      <body className={roboto.className}>
+      <body className={`${inter.className}`}>
         <Navbar />
-        <div className="">{children}</div>
+        <div className="mt-[80px]">{children}</div>
       </body>
     </html>
   );

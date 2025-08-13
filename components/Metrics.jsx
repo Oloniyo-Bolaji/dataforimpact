@@ -2,6 +2,13 @@
 
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
+import { Montserrat } from "next/font/google";
+
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 const Metrics = () => {
   const metrics = [
@@ -46,9 +53,9 @@ const Metrics = () => {
   }, [metrics]);
 
   return (
-    <div className="px-[20px] py-[50px]">
+    <div className="px-[20px] py-[20px]">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="grid sm:grid-cols-4 grid-cols-1 gap-[30px] sm:shadow-[5px_5px_10px_#ccc]">
+        <div className="grid sm:grid-cols-4 grid-cols-1 gap-[30px] sm:shadow-[5px_5px_10px_#7A7A7A]">
           {metrics.map((metric, index) => {
             return (
               <div
@@ -57,7 +64,7 @@ const Metrics = () => {
               >
                 <h4
                   ref={(el) => (numbersRef.current[index] = el)}
-                  className="text-[50px] text-[#008080]"
+                  className={`${montserrat.className} text-[50px] text-[#008080] sm:font-extrabold font-bold`}
                 >
                   0
                 </h4>

@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import FAQs from "@/components/FAQs";
 import Hero from "@/components/Hero";
+import Mentor from "@/components/Mentor";
 import Metrics from "@/components/Metrics";
 import Reviews from "@/components/Reviews";
 import Service from "@/components/Service";
@@ -10,9 +11,10 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
-      <Metrics />
       <About />
+      <Metrics />
       <Service />
+      <Mentor />
       <FAQs />
       <Reviews />
     </div>

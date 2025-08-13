@@ -18,7 +18,7 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <nav className="h-[80px] sm:w-full text-link w-full flex justify-between items-center fixed top-0 left-0 z-[1000] px-[80px] py-[0]bg-white/5  backdrop-blur-sm border border-white/30">
+    <nav className="h-[80px] sm:w-full text-link w-full flex justify-between items-center fixed top-0 left-0 z-[1000] px-[40px] py-[0] bg-white/5  backdrop-blur-sm border border-white/30">
       <div className=" sm:px-[10px]">
         <Image
           src="/datalogo.jpg"
@@ -45,10 +45,10 @@ const Navbar = () => {
           }}
           className={`flex uppercase sm:flex-row text-link sm:gap-[20px] list-none ${showMenu ? "flex flex-col gap-[10px] justify-center items-center p-[10px]" : ""}`}
         >
-          <Link href="/" className="text-[14px]">
+          <Link href="/" className="text-[14px] text-[#7A7A7A]">
             <span>Home</span>
           </Link>
-          <Link href="/" className="text-[14px]">
+          <Link href="/company" className="text-[14px]">
             <span>Company</span>
           </Link>
           <Link href="/" className="text-[14px]">

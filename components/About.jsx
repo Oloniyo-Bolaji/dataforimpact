@@ -2,54 +2,36 @@
 
 import Image from "next/image";
 import React from "react";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 const About = () => {
   return (
-    <div className="sm:px-[100px] px-[20px] flex flex-col gap-[20px]">
-      <div className="text-center ">
-        <h3 className="text-[30px] text-[#00274d] font-bold">About Us</h3>
-        <p className="text-[#7a7a7a]">
+    <div className="lg:px-[40px] sm:px-[30px] px-[20px] py-[40px] flex lg:flex-row sm:flex-col flex-col gap-[20px]">
+      <div className="w-[50%] flex items-center flex-col">
+        <h3
+          className={`${montserrat.className} text-[30px] font-bold bg-gradient-to-b from-[#008080] via-[#7a7a7a] to-[#00274D] bg-clip-text text-transparent`}
+        >
+          About Us
+        </h3>
+        <p className="text-[#7a7a7a] text-center leading-[25px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur
           orci vel lectus cursus, vel ultrices tortor interdum. Aenean bibendum
           orci eu gravida vulputate. Integer dignissim magna sit amet purus
-          suscipit, a faucibus erat mattis.
+          suscipit, a faucibus erat mattis.Aenean bibendum orci eu gravida
+          vulputate. Integer dignissim magna sit amet purus suscipit, a faucibus
+          erat mattis. Quisque fermentum pretium risus sed luctus. Integer id
+          pretium nunc. Nam venenatis enim et odio laoreet, sed eleifend mauris
+          condimentum.
         </p>
       </div>
-      <div className="flex ">
-        <div className="flex flex-col gap-[20px] max-w-lg">
-          {/**mission statement */}
-          <div className="flex flex-col gap-[15px]">
-            <h3 className="text-[15px] text-[#008080] uppercase">
-              Our Mission Statement
-            </h3>
-            <p className="border-l-[4px] border-[#008080] text-[#00808060] px-[15px] text-[15px] leading-[20px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              efficitur orci vel lectus cursus, vel ultrices tortor interdum.
-              Aenean bibendum orci eu gravida vulputate.
-            </p>
-          </div>
-          {/**vision statement */}
-          <div className="flex flex-col gap-[15px]">
-            <h3 className="text-[15px] text-[#008080] uppercase">
-              Our Vision Statement
-            </h3>
-            <p className="border-l-[4px] border-[#008080] text-[#00808060] px-[15px] text-[15px] leading-[20px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              efficitur orci vel lectus cursus, vel ultrices tortor interdum.
-              Aenean bibendum orci eu gravida vulputate.
-            </p>
-          </div>
-        </div>
-        <div className="max-w-lg ">
-          <div className="flex justify-center items-center">
-            {" "}
-            <Image
-              src="/dataanimated.png"
-              alt="image"
-              width={400}
-              height={400}
-            />
-          </div>
+      <div className="w-[50%] flex justify-center items-center h-full">
+        <div className="border border-[red] ">
+          <div className="hexagon"></div>
         </div>
       </div>
     </div>
