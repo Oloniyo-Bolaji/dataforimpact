@@ -1,16 +1,13 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Inter, Montserrat } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
-const inter = Inter({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
 });
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 export const metadata = {
   title: "Data for Impact -...touching lives we may never meet",
@@ -26,7 +23,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
-      <body className={`${inter.className}`}>
+      <body className={`${plusJakartaSans.className}`}>
         <Navbar />
         <div className="mt-[80px]">{children}</div>
       </body>

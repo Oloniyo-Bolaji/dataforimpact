@@ -8,9 +8,8 @@
 }
 
 .hexagon {
-  width: 300px;
-  height: 300px;
-  background: teal;
+  width: 400px;
+  height: 400px;
   clip-path: polygon(
     25% 6.7%,  /* top-left */
     75% 6.7%,  /* top-right */
@@ -20,3 +19,19 @@
     0% 50%     /* left */
   );
 }
+
+.vertical-sentence {
+  transform: rotate(180deg); /* optional if you need to flip direction */
+  writing-mode: vertical-rl; /* vertical right-to-left layout */
+  text-orientation: mixed;   /* keeps words normal, not each letter upright */
+
+}
+
+ .outlined {
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+  }
+
+   .text-shadow-md {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }

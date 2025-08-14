@@ -17,7 +17,7 @@ const montserrat = Montserrat({
 });
 
 const Hero = () => {
-   useGSAP(() => {
+  useGSAP(() => {
     const animation = gsap.from(".hero", {
       scrollTrigger: {
         trigger: ".hero",
@@ -37,32 +37,32 @@ const Hero = () => {
 
   return (
     <div className="lg:h-screen sm:h-screen h-[580px] my-background p-[10px]">
-      <div className="hero flex lg:justify-between justify-center items-center lg:flex-row flex-col lg:px-[60px] sm:px-[30px] px-[15px] h-full">
-        <div className="max-w-lg flex flex-col gap-[10px] lg:items-start sm:items-center items-center lg:text-left  sm:text-center text-center">
+      <div className="hero flex lg:justify-between justify-center items-center lg:flex-row sm:flex-row flex-col lg:px-[60px] sm:px-[30px] px-[15px] h-full py-[20px]">
+        <div className="lg:max-w-lg sm:max-w-sm flex flex-col gap-[10px] lg:items-start sm:items-center items-center lg:text-left  sm:text-center text-center">
           <h1
-            className={`${montserrat.className} sm:text-[50px] text-[35px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[50px] leading-[35px]`}
+            className={`${montserrat.className} mt-[10px] sm:text-[50px] text-[35px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[50px] leading-[35px]`}
           >
             Learn{" "}
             <span className="relative inline-block">
               <span className="relative z-10">Data</span>
-              <span className="absolute left-1/2 top-1/2 w-[30px] h-[30px] bg-[#008080] rounded-full -translate-x-1/2 -translate-y-1/2 z-0"></span>
+              <span className="absolute left-1/2 top-1/2 w-[40px] h-[40px] bg-[#008080] rounded-full -translate-x-1/2 -translate-y-1/2 z-0"></span>
             </span>{" "}
             Skills That Get You Hired
           </h1>
-          <p className="sm:text-[16px] text-[13px] text-[#7a7a7a]">
+          <p className="sm:text-[17px] text-[14px] text-[#7a7a7a] font-normal leading-[25px]">
             Hands-on data training with real-world projects; Flexible,
             beginner-friendly, and industry-focused. Get Taught and Mentored by
             experienced analysts and data scientists.
           </p>
           <a
             href="/"
-            className="inline-flex items-center justify-center gap-2 w-[200px] rounded-[5px] bg-[#008080] p-[5px] text-[15px] font-semibold text-white hover:bg-[#006666] transition"
+            className="inline-flex items-center justify-center gap-2 w-[200px] rounded-[15px] bg-[#008080] p-[8px] text-[14px] text-white hover:bg-[#006666] transition"
           >
             <span>Join the Next Cohort</span>
             <FaArrowRight />
           </a>
         </div>
-        <div className="max-w-lg">
+        <div className="lg:max-w-lg sm:max-w-sm">
           <Image src="/dataanimated.png" alt="image" width={400} height={400} />
         </div>
       </div>

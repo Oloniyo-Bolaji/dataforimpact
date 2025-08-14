@@ -3,7 +3,10 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { Montserrat } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 
+const plexSans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "700"] });
+const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "700"] });
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,7 +25,7 @@ const Metrics = () => {
     },
     {
       metric: "6+",
-      title: "Patners",
+      title: "Patners and Sponsors",
     },
     {
       metric: "16",
@@ -64,7 +67,7 @@ const Metrics = () => {
               >
                 <h4
                   ref={(el) => (numbersRef.current[index] = el)}
-                  className={`${montserrat.className} text-[50px] text-[#008080] sm:font-extrabold font-bold`}
+                  className={`${plexSans.className} text-[50px] text-[#008080] sm:font-extrabold font-bold`}
                 >
                   0
                 </h4>

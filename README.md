@@ -38,3 +38,31 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. 
       Aenean bibendum orci eu gravida vulputate. Integer dignissim magna sit amet purus suscipit, a faucibus erat mattis. 
       Quisque fermentum pretium risus sed luctus. Integer id pretium nunc. Nam venenatis enim et odio laoreet, sed eleifend mauris condimentum.
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+
+const plexSans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "700"] });
+const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+
+ <span className="backdrop-blur-md bg-white/20 px-3 py-1 rounded-lg border border-white/30 text-white">
+              special
+            </span>
+            <span
+              className="relative px-3 py-1 border-4 border-black rounded-full font-bold"
+              style={{ boxShadow: "box-shadow: 3px 3px 0 #000" }}
+            >
+              special
+            </span>
+            <span className="relative inline-block px-4 py-1 font-bold">
+              <span className="absolute inset-0 rounded-full border-2 border-pink-500 animate-pulse"></span>
+              <span className="relative">special</span>
+            </span>       <span className="relative inline-block">
+              <span className="absolute -inset-1 bg-[#008080] rounded-full blur-sm -z-10"></span>
+              <span className="relative font-bold">Data</span>
+            </span>
+            <span className="relative bg-[#008080] px-4 py-1 rounded-lg font-bold">
+              Data
+              <span className="absolute left-2 bottom-[-6px] w-3 h-3 bg-[#008080] rotate-45"></span>
+            </span>              <span class="relative inline-block">
+                <span class="absolute -inset-1 bg-yellow-300 rounded-full blur-sm -z-10"></span>
+                <span class="relative font-bold">special</span>
+              </span>
