@@ -14,16 +14,17 @@ const About = () => {
     <div className="py-[10px] flex flex-col gap-[20px]">
       <div className="lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col">
         <div className="sm:w-[50%] w-full flex justify-center items-center h-full">
-          <div className="hexagon bg-[url('/laptopgan.png')] bg-cover bg-center shadow-xl shadow-gray-500/50">
+          <div className="hexagon bg-[url('/laptopgan.png')] lg:h-[400px] lg:w-[400px] sm:h-[300px] sm:w-[300px] h-[200px] w-[200px] bg-cover bg-center shadow-xl shadow-gray-500/50">
           </div>
         </div>
         <div className="sm:w-[50%] w-full flex gap-[10px] items-center">
-          <p className={`${montserrat.className} vertical-sentence text-[30px] font-semibold text-[#00274D]`}>Who We Are </p>
+          <p 
+          className="headings vertical-sentence">Who We Are </p>
           <div className="flex flex-col gap-[10px]">
             {/**mission statement */}
             <div className="flex flex-col gap-[10px]">
               <h4
-                className={`${montserrat.className} text-[20px] uppercase font-semibold text-[#008080]`}
+                className={`${montserrat.className} sm:text-[20px] text-[16px] uppercase font-semibold text-[#008080]`}
               >
                 Our mission statement
               </h4>
@@ -38,7 +39,7 @@ const About = () => {
             {/**vision statement */}
             <div>
               <h4
-                className={`${montserrat.className} text-[20px] uppercase font-semibold text-[#008080]`}
+                className={`${montserrat.className} sm:text-[20px] text-[16px] uppercase font-semibold text-[#008080]`}
               >
                 Our vision statement
               </h4>

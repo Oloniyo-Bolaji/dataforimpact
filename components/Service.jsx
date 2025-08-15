@@ -1,79 +1,43 @@
 "use client";
 
 import React from "react";
-import { FaLaptop, FaCertificate } from "react-icons/fa";
-import { MdWorkOutline } from "react-icons/md";
-import { IoPeopleOutline } from "react-icons/io5";
-import { RiUserStarLine } from "react-icons/ri";
+import { services } from "@/lib/data";
 import { Montserrat } from "next/font/google";
-
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
 
-
 const Service = () => {
-  const services = [
-    {
-      icons: <FaLaptop />,
-      service: "Virtual Learning",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-    {
-      icons: <MdWorkOutline />,
-      service: "Expert Tutors",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-    {
-      icons: <IoPeopleOutline />,
-      service: "Mentorship",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-    {
-      icons: <FaCertificate />,
-      service: "Certification",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-    {
-      icons: <RiUserStarLine />,
-      service: "After Class Access ",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-    {
-      icons: <FaLaptop />,
-      service: "Bootcamp",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-  ];
   return (
-    <div className="py-[20px] px-[30px]">
+    <div className="py-[10px] px-[30px]">
       <h3
-        className={`${montserrat.className} text-[30px] text-center font-bold bg-gradient-to-b from-[#008080] via-[#7a7a7a] to-[#00274D] bg-clip-text text-transparent uppercase`}
+        className={`${montserrat.className} text-[30px] capitalize font-semibold text-[#00274D] text-center`}
       >
-        What we offer?
+        What we offer
       </h3>
-      <div className="grid sm:grid-cols-3 grid-cols-1 gap-[20px]">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-full gap-[20px] py-[10px]">
         {services.map((service, index) => {
           return (
-            <div key={index} className="flex gap-[10px] w-full">
+            <div
+              key={index}
+              className="flex gap-[10px] w-full shadow-[2px_2px_3px_#7a7a7a] p-[10px] rounded-[10px]"
+            >
               <div className="w-[20%] flex justify-center items-center">
-                <span className="border-[3px] rounded-full border-[#008080] p-[20px] text-[#008080] sm:text-[30px] text-[20px] font-bold">
-                  {service.icons}
+                <span className="inline-flex items-center justify-center p-[2px] rounded-full bg-gradient-to-b from-[#008080] to-[#00274d]">
+                  <span className="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-white text-[#008080] sm:text-[30px] text-[20px] font-bold">
+                    {service.icons}
+                  </span>
                 </span>
               </div>
               <div className="w-[80%]">
-                <h3 className={`${montserrat.className} uppercase text-[15px] text-[#00274d]`}>
+                <h3
+                  className={`${montserrat.className} capitalize font-bold text-[16px] text-[#00274d]`}
+                >
                   {service.service}
                 </h3>
-                <p className="leading-[20px] text-[14px] text-[#00274d]">
+                <p className="leading-[25px] text-[14px] text-[#00274D60] text-justify font-medium">
                   {service.description}
                 </p>
               </div>

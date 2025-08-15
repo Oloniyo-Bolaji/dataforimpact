@@ -35,9 +35,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. 
-      Aenean bibendum orci eu gravida vulputate. Integer dignissim magna sit amet purus suscipit, a faucibus erat mattis. 
-      Quisque fermentum pretium risus sed luctus. Integer id pretium nunc. Nam venenatis enim et odio laoreet, sed eleifend mauris condimentum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum.
+Aenean bibendum orci eu gravida vulputate. Integer dignissim magna sit amet purus suscipit, a faucibus erat mattis.
+Quisque fermentum pretium risus sed luctus. Integer id pretium nunc. Nam venenatis enim et odio laoreet, sed eleifend mauris condimentum.
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 
 const plexSans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "700"] });
@@ -66,3 +66,6 @@ const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "700"] });
                 <span class="absolute -inset-1 bg-yellow-300 rounded-full blur-sm -z-10"></span>
                 <span class="relative font-bold">special</span>
               </span>
+
+              </div>
+              

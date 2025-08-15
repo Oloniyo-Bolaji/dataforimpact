@@ -71,7 +71,7 @@ const Mentors = () => {
   ];
   return (
     <div className="px-[30px]">
-      <h3 className="text-center text-[30px] text-[#00274d] my-[10px]">
+      <h3 className={`${montserrat.className} text-[30px] capitalize font-semibold text-[#00274D] text-center`}>
         Meet Our Mentors
       </h3>
       <div className="w-full flex flex-col gap-6">

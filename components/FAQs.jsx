@@ -1,54 +1,50 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa6";
+import { faqs } from "@/lib/data";
+import { Montserrat } from "next/font/google";
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 const FAQs = () => {
-  const faqs = [
-    {
-      id: 1,
-      question: "What is Data for Impact",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-    {
-      id: 2,
-      question: "How do I join",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-    {
-      id: 3,
-      question: "Can I join for free",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-    {
-      id: 4,
-      question: "How are the classes held, Virtual or Onsite",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-    {
-      id: 5,
-      question: "When does the next cohort start",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum. ",
-    },
-  ];
+  const [openId, setOpenId] = useState(1);
+
+  const handleAnswer = (id) => {
+    setOpenId(openId === id ? null : id);
+  };
+
   return (
-    <div className="py-[20px] sm:px-[100px] px-[30px]">
-      <h3 className="text-center text-[30px] text-[#00274d] my-[10px]">FAQs</h3>
-      <div className="w-full flex flex-col justify-center items-center">
-        {faqs.map((faq) => {
-          return (
-            <div key={faq.id}>
-              <div>{faq.question}?</div>
-              <div>{faq.answer}</div>
+    <div className="my-[20px] flex sm:flex-row flex-col gap-[10px] bg-[#7a7a7a70] p-[50px]">
+      <div className="sm:w-[35%] w-full flex justify-center items-start flex-col">
+        <h3
+          className={`${montserrat.className} capitalize text-[30px] font-semibold text-[#00274d] my-[10px]`}
+        >
+          Frequently asked questions
+        </h3>
+        <p className="text-[#00274d70]">Get answers to the frequently asked questions</p>
+      </div>
+
+      <div className="sm:w-[65%] w-full p-[20px] flex flex-col justify-center items-center bg-[#7a7a7a80]">
+        {faqs.map((faq) => (
+          <div
+            key={faq.id}
+            className="w-full border-b-[1px] border-[#7a7a7a] flex flex-col py-2"
+          >
+            <div className="flex justify-between items-center text-[#00274d] font-semibold text-[16px]">
+              <h3>{faq.question}?</h3>
+              <button onClick={() => handleAnswer(faq.id)}>
+                {openId === faq.id ? <FaMinus /> : <FaPlus />}
+              </button>
             </div>
-          );
-        })}
+            {openId === faq.id && (
+              <div className="mt-[10px] text-[#00274d70] text-[16px]">{faq.answer}</div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
