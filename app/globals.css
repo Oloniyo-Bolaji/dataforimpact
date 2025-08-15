@@ -6,7 +6,7 @@
 }
 
 @utility headings {
-  @apply text-[30px] capitalize font-semibold text-[#00274D] text-center;
+  @apply sm:text-[30px] text-[20px] capitalize font-semibold text-[#00274D] text-center;
   font-family: 'Montserrat', sans-serif;
 }
 .my-background {

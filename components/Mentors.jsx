@@ -3,17 +3,12 @@
 import Image from "next/image";
 import React from "react";
 import { mentors } from "@/lib/data";
-import { Montserrat } from "next/font/google";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 const Mentors = () => {
   
   return (
     <div className="px-[30px]">
-      <h3 className={`${montserrat.className} text-[30px] capitalize font-semibold text-[#00274D] text-center`}>
+      <h3 className="headings">
         Meet Our Mentors
       </h3>
       <div className="w-full flex flex-col gap-6">

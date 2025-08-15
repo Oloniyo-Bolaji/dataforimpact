@@ -2,19 +2,14 @@
 
 import React from "react";
 import Marquee from "react-fast-marquee";
-import { Montserrat } from "next/font/google";
 import Image from "next/image";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 const Partners = () => {
   return (
     <div className="py-[10px]">
       <h3
-        className={`${montserrat.className} text-[30px] capitalize font-semibold text-[#00274D] text-center`}
+        className="headings"
       >
         Our Sponsors & Partners
       </h3>

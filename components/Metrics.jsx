@@ -2,43 +2,19 @@
 
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
-import { Montserrat } from "next/font/google";
-import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { metrics } from "@/lib/data";
+import { IBM_Plex_Sans } from "next/font/google";
 
 const plexSans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "700"] });
-const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "700"] });
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 const Metrics = () => {
-  const metrics = [
-    {
-      metric: "6",
-      title: "Mentors",
-    },
-    {
-      metric: "20+",
-      title: "Mentees",
-    },
-    {
-      metric: "6+",
-      title: "Patners and Sponsors",
-    },
-    {
-      metric: "16",
-      title: "Graduates",
-    },
-  ];
   const numbersRef = useRef([]);
 
   useEffect(() => {
     numbersRef.current.forEach((el, i) => {
       const rawValue = metrics[i].metric;
-      const hasPlus = rawValue.includes("+"); 
-      const endValue = parseInt(rawValue, 10); 
+      const hasPlus = rawValue.includes("+");
+      const endValue = parseInt(rawValue, 10);
 
       const counter = { value: 0 };
 

@@ -18,14 +18,14 @@ const FAQs = () => {
   };
 
   return (
-    <div className="my-[20px] flex sm:flex-row flex-col gap-[10px] bg-[#7a7a7a70] p-[50px]">
+    <div className="my-[20px] flex sm:flex-row flex-col gap-[10px] bg-[#7a7a7a70] sm:p-[50px] p-[20px]">
       <div className="sm:w-[35%] w-full flex justify-center items-start flex-col">
         <h3
-          className={`${montserrat.className} capitalize text-[30px] font-semibold text-[#00274d] my-[10px]`}
+          className="headings"
         >
           Frequently asked questions
         </h3>
-        <p className="text-[#00274d70]">Get answers to the frequently asked questions</p>
+        <p className="text-[#00274d70] sm:text-[20px] text-[15px]">Get answers to the frequently asked questions</p>
       </div>
 
       <div className="sm:w-[65%] w-full p-[20px] flex flex-col justify-center items-center bg-[#7a7a7a80]">
@@ -34,14 +34,14 @@ const FAQs = () => {
             key={faq.id}
             className="w-full border-b-[1px] border-[#7a7a7a] flex flex-col py-2"
           >
-            <div className="flex justify-between items-center text-[#00274d] font-semibold text-[16px]">
+            <div className="flex justify-between items-center text-[#00274d] font-semibold sm:text-[16px] text-[14px]">
               <h3>{faq.question}?</h3>
               <button onClick={() => handleAnswer(faq.id)}>
                 {openId === faq.id ? <FaMinus /> : <FaPlus />}
               </button>
             </div>
             {openId === faq.id && (
-              <div className="mt-[10px] text-[#00274d70] text-[16px]">{faq.answer}</div>
+              <div className="mt-[10px] text-[#00274d70] sm:text-[16px] text-[14px] text-justify">{faq.answer}</div>
             )}
           </div>
         ))}

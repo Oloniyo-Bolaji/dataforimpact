@@ -68,4 +68,8 @@ const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "700"] });
               </span>
 
               </div>
-              
+    <span className="inline-flex items-center justify-center p-[2px] rounded-full bg-gradient-to-b from-[#008080] to-[#00274d]">
+                  <span className="flex items-center justify-center w-[60px] h-[60px] rounded-full text-white sm:text-[30px] text-[20px] font-bold">
+                    {service.icons}
+                  </span>
+                </span>           

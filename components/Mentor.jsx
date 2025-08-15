@@ -3,22 +3,12 @@
 import Image from "next/image";
 import React from "react";
 import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
-import { Montserrat } from "next/font/google";
 import { mentors } from "@/lib/data";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 const Mentor = () => {
   return (
     <div>
-      <h3
-        className={`${montserrat.className} text-[30px] capitalize font-semibold text-[#00274D] text-center`}
-      >
-        Meet Our Mentors
-      </h3>
+      <h3 className="headings">Meet Our Mentors</h3>
       <main className="grid sm:grid-cols-3 grid-cols-1 gap-[30px] px-[50px]">
         {mentors.map((mentor) => {
           return (
@@ -39,7 +29,9 @@ const Mentor = () => {
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center gap-[10px]">
-                <h4 className="font-semibold text-[16px] text-shadow-[1px_1px_2px_#7a7a7a]">{mentor.name}</h4>
+                <h4 className="font-semibold sm:text-[16px] text-[14px] text-shadow-[1px_1px_2px_#7a7a7a] text-center">
+                  {mentor.name}
+                </h4>
                 <div className="flex gap-[20px] text-[15px]">
                   <a href="/">
                     <FaXTwitter />

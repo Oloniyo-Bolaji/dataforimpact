@@ -12,11 +12,7 @@ const montserrat = Montserrat({
 const Service = () => {
   return (
     <div className="py-[10px] px-[30px]">
-      <h3
-        className={`${montserrat.className} text-[30px] capitalize font-semibold text-[#00274D] text-center`}
-      >
-        What we offer
-      </h3>
+      <h3 className="headings">What we offer</h3>
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-full gap-[20px] py-[10px]">
         {services.map((service, index) => {
           return (
@@ -25,10 +21,8 @@ const Service = () => {
               className="flex gap-[10px] w-full shadow-[2px_2px_3px_#7a7a7a] p-[10px] rounded-[10px]"
             >
               <div className="w-[20%] flex justify-center items-center">
-                <span className="inline-flex items-center justify-center p-[2px] rounded-full bg-gradient-to-b from-[#008080] to-[#00274d]">
-                  <span className="flex items-center justify-center w-[60px] h-[60px] rounded-full bg-white text-[#008080] sm:text-[30px] text-[20px] font-bold">
-                    {service.icons}
-                  </span>
+                <span className={`bg-[${service.color}] flex items-center justify-center w-[60px] h-[60px] rounded-full text-white sm:text-[30px] text-[20px] font-bold`}>
+                  {service.icons}
                 </span>
               </div>
               <div className="w-[80%]">
