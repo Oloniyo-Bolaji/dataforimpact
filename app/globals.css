@@ -53,4 +53,20 @@
 .text-shadow-md {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-
+.glass {
+/* From https://css.glass */
+background: rgba(165, 165, 165, 0.31);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(165, 165, 165, 0.3);
+}
+.blueglass{
+/* From https://css.glass */
+background: rgba(0, 39, 77, 0.81);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(0, 39, 77, 0.3);
+}

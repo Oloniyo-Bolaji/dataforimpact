@@ -24,7 +24,7 @@ const About = () => {
     x: -110,
     y: -70,
     opacity: 1,
-    duration: 0.,
+    duration: 0.5,
     ease: "power2.out",
   });
 
@@ -37,7 +37,7 @@ const About = () => {
     x: 110,
     y: -70,
     opacity: 1,
-    duration: 0.,
+    duration: 0.5,
     ease: "power2.out",
   });
 
@@ -50,7 +50,7 @@ const About = () => {
     x: 0,
     y: 120,
     opacity: 1,
-    duration: 0.,
+    duration: 0.5,
     ease: "power2.out",
   });
 
@@ -66,7 +66,7 @@ const About = () => {
 
       <div className="lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col sm:gap-[20px] gap-[100px]">
 
-        <div className="sm:w-[50%] w-full flex-center h-full">
+        <div className="sm:w-[50%] w-full sm:flex-center hidden h-full">
           <div className="relative w-[300px] h-[300px] mx-auto">
             {/* First image */}
             <div className="first shadow-[10px_10px_#7a7a7a] about-image">

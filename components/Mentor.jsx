@@ -8,7 +8,7 @@ import { mentors } from "@/lib/data";
 const Mentor = () => {
   return (
     <div>
-      <h3 className="headings">Meet Our Mentors</h3>
+      <h3 className="headings">Meet The Mentors</h3>
       <main className="grid sm:grid-cols-3 grid-cols-1 gap-[30px] px-[50px]">
         {mentors.map((mentor) => {
           return (

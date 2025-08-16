@@ -4,14 +4,17 @@ import React from "react";
 
 const Reviews = () => {
   return (
-    <div className="sm:my-[30px] py-[10px] px-[30px] text-center">
+    <div className="sm:my-[30px] py-[10px] px-[30px] text-center glass rounded-[16px] min-h-[400px]">
       <h3 className="headings">Impact Stories</h3>
-
-      <div className="mt-6 flex justify-center">
+      <p className="text-center sm:text-[17px] text-[14px] text-[#7a7a7a] font-normal leading-[25px]">
+        Listen to what some of our graduates have to say about the Data for Impact Bootcamp
+      </p>
+      <div className="mt-6 flex justify-center w-full">
         <video
           src="/reviews.mp4"
           controls
-          className="rounded-xl shadow-lg w-full max-w-[800px] h-[200px] sm:h-[300px] md:h-[400px]"
+          title="Graduate Reviews"
+          className="rounded-xl shadow-lg w-full max-w-[800px] aspect-video"
         ></video>
       </div>
     </div>
