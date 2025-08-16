@@ -14,7 +14,7 @@ const Partners = () => {
         Our Sponsors & Partners
       </h3>
       <Marquee
-        speed={150}
+        speed={100}
         gradient={false}
         className="flex items-center py-2 "
       >

@@ -1,13 +1,13 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-plus-jakarta",
 });
-
 
 export const metadata = {
   title: "Data for Impact -...touching lives we may never meet",
@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
       <body className={`${plusJakartaSans.className}`}>
         <Navbar />
         <div className="mt-[80px]">{children}</div>
+        <Footer />
       </body>
     </html>
   );

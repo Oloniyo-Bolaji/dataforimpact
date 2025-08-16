@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Announcement from "@/components/Announcement";
 import FAQs from "@/components/FAQs";
 import Hero from "@/components/Hero";
 import Mentor from "@/components/Mentor";
@@ -12,12 +13,13 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
-      <Metrics />
+      <Announcement />
       <About />
-      <Partners />
       <Service />
+      <Partners />
       <Mentor />
       <FAQs />
+      <Metrics />
       <Reviews />
     </div>
   );

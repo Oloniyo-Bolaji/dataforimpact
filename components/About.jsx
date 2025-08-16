@@ -3,6 +3,10 @@
 import Image from "next/image";
 import React from "react";
 import { Montserrat } from "next/font/google";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+gsap.registerPlugin(useGSAP);
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -10,16 +14,94 @@ const montserrat = Montserrat({
 });
 
 const About = () => {
+ useGSAP(() => {
+  const anim1 = gsap.to(".first", {
+    scrollTrigger: {
+      trigger: ".first",
+      start: "top 60%",
+      toggleActions: "play none none none",
+    },
+    x: -110,
+    y: -70,
+    opacity: 1,
+    duration: 0.,
+    ease: "power2.out",
+  });
+
+  const anim2 = gsap.to(".second", {
+    scrollTrigger: {
+      trigger: ".second",
+      start: "top 60%",
+      toggleActions: "play none none none",
+    },
+    x: 110,
+    y: -70,
+    opacity: 1,
+    duration: 0.,
+    ease: "power2.out",
+  });
+
+  const anim3 = gsap.to(".third", {
+    scrollTrigger: {
+      trigger: ".third",
+      start: "top 60%",
+      toggleActions: "play none none none",
+    },
+    x: 0,
+    y: 120,
+    opacity: 1,
+    duration: 0.,
+    ease: "power2.out",
+  });
+
+  return () => {
+    anim1.kill();
+    anim2.kill();
+    anim3.kill();
+  };
+}, []);
+
   return (
-    <div className="py-[10px] flex flex-col gap-[20px]">
-      <div className="lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col">
-        <div className="sm:w-[50%] w-full flex justify-center items-center h-full">
-          <div className="hexagon bg-[url('/laptopgan.png')] lg:h-[400px] lg:w-[400px] sm:h-[300px] sm:w-[300px] h-[200px] w-[200px] bg-cover bg-center shadow-xl shadow-gray-500/50">
+    <div className="py-[30px] flex-col-center gap-[20px]">
+
+      <div className="lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col sm:gap-[20px] gap-[100px]">
+
+        <div className="sm:w-[50%] w-full flex-center h-full">
+          <div className="relative w-[300px] h-[300px] mx-auto">
+            {/* First image */}
+            <div className="first shadow-[10px_10px_#7a7a7a] about-image">
+              <Image
+                src="/laptopgan.png"
+                alt=""
+                fill
+                className="object-cover rounded-full"
+              />
+            </div>
+
+            {/* Second image */}
+            <div className="second about-image shadow-[10px_10px_#008080]">
+              <Image
+                src="/about2.jpg"
+                alt=""
+                fill
+                className="object-cover rounded-full"
+              />
+            </div>
+
+            {/* Third image */}
+            <div className="third about-image shadow-[10px_10px_#00274d]">
+              <Image
+                src="/about1.webp"
+                alt=""
+                fill
+                className="object-cover rounded-full"
+              />
+            </div>
           </div>
         </div>
+
         <div className="sm:w-[50%] w-full flex gap-[10px] items-center">
-          <p 
-          className="headings vertical-sentence">Who We Are </p>
+          <p className="headings vertical-sentence">Who We Are </p>
           <div className="flex flex-col gap-[10px]">
             {/**mission statement */}
             <div className="flex flex-col gap-[10px]">
