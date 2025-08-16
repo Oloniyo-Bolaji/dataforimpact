@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Announcement from "@/components/Announcement";
 import FAQs from "@/components/FAQs";
+import Graduates from "@/components/Graduates";
 import Hero from "@/components/Hero";
 import Mentor from "@/components/Mentor";
 import Metrics from "@/components/Metrics";
@@ -22,6 +23,7 @@ export default function Home() {
       <FAQs />
       <Metrics />
       <Reviews />
+      <Graduates />
       <Register />
     </div>
   );
