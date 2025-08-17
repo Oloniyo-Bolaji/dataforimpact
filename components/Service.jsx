@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 const Service = () => {
 
   return (
-    <div className="sm:my-[30px] py-[10px] px-[30px]">
+    <div className="px-[30px]">
       <h3 className="headings">What we offer</h3>
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-full gap-[20px] py-[10px]">
         {services.map((service, index) => {

@@ -36,7 +36,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="lg:h-screen sm:h-svh h-[600px] bg-cover bg-[#ffffff] bg-fixed my-background p-[10px]">
+    <div className="lg:h-screen sm:h-[800px] h-[600px] bg-cover bg-[#ffffff] bg-fixed my-background p-[10px]">
       <div className="hero flex lg:justify-between justify-center items-center lg:flex-row sm:flex-row flex-col lg:px-[60px] sm:px-[30px] px-[15px] h-full my-[20px]">
         <div className="lg:max-w-lg sm:max-w-sm flex flex-col gap-[10px] lg:items-start sm:items-center items-center lg:text-left  sm:text-center text-center">
           <h1

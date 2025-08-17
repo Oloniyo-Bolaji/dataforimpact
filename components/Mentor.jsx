@@ -16,7 +16,7 @@ const Mentor = () => {
               key={mentor.id}
               className="flex flex-col justify-center items-center"
             >
-              <div className="w-[150px] h-[150px] rounded-full bg-gradient-to-b from-[#008080] to-[#00274D] p-[5px]">
+              <div className="sm:w-[200px] sm:h-[200px] w-[150px] h-[150px] rounded-full bg-gradient-to-b from-[#008080] to-[#00274D]  p-[5px]">
                 <div className="relative w-full h-full">
                   <Image
                     src={mentor.image}
@@ -29,7 +29,7 @@ const Mentor = () => {
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center gap-[10px]">
-                <h4 className="font-semibold sm:text-[16px] text-[14px] text-shadow-[1px_1px_2px_#7a7a7a] text-center">
+                <h4 className="font-semibold sm:text-[16px] text-[14px] text-center text-[#008080]">
                   {mentor.name}
                 </h4>
                 <div className="flex gap-[20px] text-[15px]">
@@ -37,7 +37,7 @@ const Mentor = () => {
                     <FaXTwitter />
                   </a>
 
-                  <a href="/">
+                  <a href="/" className="text-[#0A66C2]">
                     <FaLinkedin />
                   </a>
                 </div>

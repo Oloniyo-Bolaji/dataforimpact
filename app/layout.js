@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       <body className={`${plexSans.className}`}>
         <Navbar />
         <div className="mt-[80px]">{children}</div>
-        {/*<Footer />*/}
+        <Footer />
       </body>
     </html>
   );

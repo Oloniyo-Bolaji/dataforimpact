@@ -7,14 +7,14 @@ import Image from "next/image";
 
 const Partners = () => {
   return (
-    <div className="py-[10px]">
+    <div className="my-[20px] py-[10px] shadow-[0_2px_5px_#7a7a7a,0_-2px_5px_#7a7a7a]">
       <h3
         className="headings"
       >
         Our Sponsors & Partners
       </h3>
       <Marquee
-        speed={100}
+        speed={70}
         gradient={false}
         className="flex items-center py-2 "
       >

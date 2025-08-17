@@ -51,14 +51,14 @@ const Navbar = () => {
           }}
           className={`${montserrat.className} flex capitalize sm:flex-row text-[20px] sm:gap-[20px] list-none ${showMenu ? "flex flex-col gap-[10px] justify-center items-center p-[10px]" : ""}`}
         >
-          <Link href="/" className="text-[14px] text-[#7A7A7A]">
+          <Link href="/" className="text-[16px] text-[#7A7A7A]">
             <span>Home</span>
           </Link>
-          <Link href="/company" className="text-[14px]">
+          {/*<Link href="/company" className="text-[16px]">
             <span>Company</span>
-          </Link>
-          <Link href="/" className="text-[14px]">
-            <span>News</span>
+          </Link>*/}
+          <Link href="/" className="text-[16px]">
+            <span>Blog</span>
           </Link>
         </ul>
       </div>

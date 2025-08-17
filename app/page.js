@@ -17,14 +17,14 @@ export default function Home() {
       <Hero />
       <Announcement />
       <About />
+      <Metrics />
       <Service />
       <Partners />
-      <Mentor />
       <FAQs />
-      <Metrics />
+      <Mentor />
       <Reviews />
-      <Graduates />
       <Register />
+      <Graduates />
     </div>
   );
 }

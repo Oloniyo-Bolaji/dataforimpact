@@ -62,7 +62,7 @@ const About = () => {
 }, []);
 
   return (
-    <div className="py-[30px] flex-col-center gap-[20px]">
+    <div className="my-[50px] flex-col-center gap-[20px]">
 
       <div className="lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col sm:gap-[20px] gap-[100px]">
 
@@ -106,11 +106,11 @@ const About = () => {
             {/**mission statement */}
             <div className="flex flex-col gap-[10px]">
               <h4
-                className={`${montserrat.className} sm:text-[20px] text-[16px] uppercase font-semibold text-[#008080]`}
+                className={`${montserrat.className} sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]`}
               >
                 Our mission statement
               </h4>
-              <p className="text-justify border-l-[4px] border-[#00274D] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
+              <p className="text-justify border-l-[4px] border-[#1e365b] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 efficitur orci vel lectus cursus, vel ultrices tortor interdum.
                 Aenean bibendum orci eu gravida vulputate. Integer dignissim
@@ -119,13 +119,13 @@ const About = () => {
               </p>
             </div>
             {/**vision statement */}
-            <div>
+            <div className="flex flex-col gap-[10px]">
               <h4
-                className={`${montserrat.className} sm:text-[20px] text-[16px] uppercase font-semibold text-[#008080]`}
+                className={`${montserrat.className} sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]`}
               >
                 Our vision statement
               </h4>
-              <p className="text-justify border-l-[4px] border-[#00274D] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
+              <p className="text-justify border-l-[4px] border-[#1e365b] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 efficitur orci vel lectus cursus, vel ultrices tortor interdum.
                 Aenean bibendum orci eu gravida vulputate. Integer dignissim

@@ -19,36 +19,27 @@ const FAQs = () => {
   };
 
   return (
-    <div className="my-[20px] flex sm:flex-row flex-col gap-[10px] blueglass sm:p-[50px] p-[20px]">
-      <div className="sm:w-[35%] w-full flex flex-col">
-        <h3 className="headings text-left">Frequently asked questions</h3>
-        <p className="text-[#00274d70] sm:text-[20px] text-[15px]">
+    <div className="my-[20px] flex sm:flex-row flex-col gap-[10px] bg-[#2b4063] sm:p-[50px] p-[20px]">
+      <div className="sm:w-[35%] w-full flex flex-col justify-center items-center text-center">
+        <h3 className="headings text-[#edeef2]">
+          Frequently asked questions
+        </h3>
+        <p className="text-[#edeef270] sm:text-[20px] text-[15px]">
           Get answers to the frequently asked questions
         </p>
-        <div className="justify-center items-center sm:flex hidden">
-          <Image
-            src="/questionmark.png"
-            alt="question mark"
-            width={200}
-            height={200}
-          />
-        </div>
       </div>
 
-      <div className="sm:w-[65%] w-full p-[20px] flex flex-col justify-center items-center glass divide-[#7a7a7a] divide-y-[1px]">
+      <div className="sm:w-[65%] w-full p-[20px] flex flex-col justify-center items-center bg-[#505e7d] divide-[#7a7a7a] divide-y-[1px]">
         {faqs.map((faq) => (
-          <div
-            key={faq.id}
-            className="w-full flex flex-col py-2"
-          >
-            <div className="flex justify-between items-center text-[#00274d] font-semibold sm:text-[16px] text-[14px]">
+          <div key={faq.id} className="w-full flex flex-col py-2">
+            <div className="flex justify-between items-center text-[#edeef2] font-semibold sm:text-[16px] text-[14px]">
               <h3>{faq.question}?</h3>
               <button onClick={() => handleAnswer(faq.id)}>
                 {openId === faq.id ? <FaMinus /> : <FaPlus />}
               </button>
             </div>
             {openId === faq.id && (
-              <div className="mt-[10px] text-[#edeef2] sm:text-[15px] text-[13px] text-justify">
+              <div className="mt-[10px] text-[#edeef270] sm:text-[15px] text-[13px] text-justify">
                 {faq.answer}.
               </div>
             )}
