@@ -69,7 +69,7 @@ const About = () => {
         <div className="sm:w-[50%] w-full sm:flex-center hidden h-full">
           <div className="relative w-[300px] h-[300px] mx-auto">
             {/* First image */}
-            <div className="first shadow-[10px_10px_#7a7a7a] about-image">
+            <div className="first about-image border-[#00274D]">
               <Image
                 src="/laptopgan.png"
                 alt=""
@@ -79,7 +79,7 @@ const About = () => {
             </div>
 
             {/* Second image */}
-            <div className="second about-image shadow-[10px_10px_#008080]">
+            <div className="second about-image border-[#7A7A7A]">
               <Image
                 src="/about2.jpg"
                 alt=""
@@ -89,7 +89,7 @@ const About = () => {
             </div>
 
             {/* Third image */}
-            <div className="third about-image shadow-[10px_10px_#00274d]">
+            <div className="third about-image border-[#008080] border-double">
               <Image
                 src="/about1.webp"
                 alt=""

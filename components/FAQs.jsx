@@ -19,7 +19,7 @@ const FAQs = () => {
   };
 
   return (
-    <div className="my-[20px] flex sm:flex-row flex-col gap-[10px] bg-[#a5a5a5] sm:p-[50px] p-[20px]">
+    <div className="my-[20px] flex sm:flex-row flex-col gap-[10px] blueglass sm:p-[50px] p-[20px]">
       <div className="sm:w-[35%] w-full flex flex-col">
         <h3 className="headings text-left">Frequently asked questions</h3>
         <p className="text-[#00274d70] sm:text-[20px] text-[15px]">
@@ -35,11 +35,11 @@ const FAQs = () => {
         </div>
       </div>
 
-      <div className="sm:w-[65%] w-full p-[20px] flex flex-col justify-center items-center glass">
+      <div className="sm:w-[65%] w-full p-[20px] flex flex-col justify-center items-center glass divide-[#7a7a7a] divide-y-[1px]">
         {faqs.map((faq) => (
           <div
             key={faq.id}
-            className="w-full border-b-[1px] border-[#7a7a7a] flex flex-col py-2"
+            className="w-full flex flex-col py-2"
           >
             <div className="flex justify-between items-center text-[#00274d] font-semibold sm:text-[16px] text-[14px]">
               <h3>{faq.question}?</h3>
@@ -48,7 +48,7 @@ const FAQs = () => {
               </button>
             </div>
             {openId === faq.id && (
-              <div className="mt-[10px] text-[#00274d70] sm:text-[16px] text-[14px] text-justify">
+              <div className="mt-[10px] text-[#edeef2] sm:text-[15px] text-[13px] text-justify">
                 {faq.answer}.
               </div>
             )}

@@ -10,7 +10,6 @@ const montserrat = Montserrat({
 });
 
 const Service = () => {
-  const colors = ["red", "blue", "pink", "green", "grey", "orange"];
 
   return (
     <div className="sm:my-[30px] py-[10px] px-[30px]">
@@ -20,11 +19,11 @@ const Service = () => {
           return (
             <div
               key={index}
-              className="flex flex-col justify-center items-center gap-[10px] w-full bg-[#a5a5a510] shadow-[2px_2px_3px_#7a7a7a] p-[10px] rounded-[10px]"
+              className="flex flex-col justify-center items-center gap-[10px] w-full bg-[#e9eaef] shadow-[2px_2px_3px_#7a7a7a] p-[10px] rounded-[10px]"
             >
               <div className="w-[20%] flex justify-center items-center">
                 <span
-                  style={{ backgroundColor: colors[index] }}
+                  style={{ backgroundColor: service.color }}
                   className=" flex items-center justify-center w-[60px] h-[60px] rounded-full text-white sm:text-[30px] text-[20px] font-bold"
                 >
                   {service.icons}
@@ -32,7 +31,7 @@ const Service = () => {
               </div>
               <div className="w-[80%] text-center">
                 <h3
-                  className={`${montserrat.className} capitalize font-bold text-[16px] text-[#00274d]`}
+                  className={`${montserrat.className} capitalize font-bold text-[16px] text-[#008080]`}
                 >
                   {service.service}
                 </h3>
