@@ -30,6 +30,11 @@ const Register = () => {
             Don’t miss your chance to become part of our next bootcamp cohort.
           </p>
         </div>
+         <div className="w-full">
+          <h4>Suscribe to our newsletter</h4>
+          <input />
+          <button>Suscribe</button>
+        </div>
         <div className="flex items-center justify-center">
           <a
             href=""

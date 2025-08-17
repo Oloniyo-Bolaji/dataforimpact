@@ -57,7 +57,7 @@ const Navbar = () => {
           {/*<Link href="/company" className="text-[16px]">
             <span>Company</span>
           </Link>*/}
-          <Link href="/" className="text-[16px]">
+          <Link href="/blog" className="text-[16px]">
             <span>Blog</span>
           </Link>
         </ul>

@@ -7,8 +7,13 @@ import {
   FaSquareFacebook,
   FaSquareInstagram,
 } from "react-icons/fa6";
+import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { Montserrat } from "next/font/google";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -17,66 +22,55 @@ const montserrat = Montserrat({
 
 const Footer = () => {
   return (
-    <footer className="bg-[#a5a5a5]">
-      <div className="glass flex justify-between items-center px-[30px] py-[5px]">
-        <h4>Get connected with us on social media</h4>
-        <div className="flex gap-[10px] text-[16px]">
-          <a href="">
-            <FaLinkedin />
-          </a>
-          <a href="">
-            <FaSquareFacebook />
-          </a>
-          <a href="">
-            <FaSquareInstagram />
-          </a>
-          <a href="">
-            <FaXTwitter />
-          </a>
-        </div>
-      </div>
-      <div className="flex sm:flex-row sm:justify-between flex-col gap-[10px] px-[40px] py-[20px]">
-        <div className="w-full">
-          <h5>Data for Impact</h5>
-          <div>
-            {/**mission statement */}
-            <div className="flex flex-col gap-[10px]">
-              <h4
-                className={`${montserrat.className} sm:text-[20px] text-[16px] uppercase font-semibold text-[#008080]`}
-              >
-                Our mission statement
-              </h4>
-              <p className="text-justify border-l-[4px] border-[#00274D] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                efficitur orci vel lectus cursus, vel ultrices tortor interdum.
-                Aenean bibendum orci eu gravida vulputate. Integer dignissim
-                magna sit amet purus suscipit, a faucibus erat mattis.Aenean
-                bibendum orci eu gravida vulputate.
-              </p>
-            </div>
-            {/**vision statement */}
-            <div>
-              <h4
-                className={`${montserrat.className} sm:text-[20px] text-[16px] uppercase font-semibold text-[#008080]`}
-              >
-                Our vision statement
-              </h4>
-              <p className="text-justify border-l-[4px] border-[#00274D] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                efficitur orci vel lectus cursus, vel ultrices tortor interdum.
-                Aenean bibendum orci eu gravida vulputate. Integer dignissim
-                magna sit amet purus suscipit, a faucibus erat mattis.Aenean
-                bibendum orci eu gravida vulputate.
-              </p>
-            </div>
+    <footer className="bg-[#2b4063] flex flex-col px-[20px]">
+      <div className="flex sm:flex-row flex-col justify-between sm:gap-[100px] gap-[10px] py-[20px] px-[10px]">
+        <div className="flex flex-col gap-[20px]">
+          <h1
+            className={`${montserrat.className} text-[20px] text-[#edeef2] font-bold`}
+          >
+            Data for Impact
+          </h1>
+          <p className="text-[#edeef270] text-[15px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            efficitur orci vel lectus cursus, vel ultrices tortor interdum.
+            Aenean bibendum orci eu gravida vulputate.
+          </p>
+          <div className="flex gap-[10px] text-[20px] text-[#edeef2]">
+            <a href="">
+              <FaLinkedin />
+            </a>
+            <a href="">
+              <FaSquareFacebook />
+            </a>
+            <a href="">
+              <FaSquareInstagram />
+            </a>
+            <a href="">
+              <FaXTwitter />
+            </a>
           </div>
+          <button
+            onClick={() => {
+              gsap.to(window, { duration: 1, scrollTo: 0 });
+            }}
+            className="border border-[#edeef2] w-fit inline-flex items-center gap-[10px] p-[5px] rounded-[5px] text-[#edeef2] uppercase text-[13px]"
+          >
+            <span className="animate-bounce">
+              <MdKeyboardDoubleArrowUp />
+            </span>
+            <span>back to top</span>
+          </button>
         </div>
 
         <div className="w-full">
-          <h5>Quick Links</h5>
-          <ul>
+          <h5
+            className={`${montserrat.className} text-[14px] text-[#edeef2] font-bold`}
+          >
+            Quick Links
+          </h5>
+          <ul className="flex flex-col gap-[5px] text-[#edeef270] text-[14px]">
             <li>
-              <a href="">About US</a>
+              <a href="">About Us</a>
             </li>
             <li>
               <a href="">Services</a>
@@ -88,26 +82,19 @@ const Footer = () => {
               <a href="">FAQs</a>
             </li>
             <li>
-              <a href="">Impact Stories</a>
+              <a href="">Reviews</a>
             </li>
             <li>
-              <Link href="/company">Company</Link>
-            </li>
-            <li>
-              <Link href="">News</Link>
+              <Link href="/blog">News</Link>
             </li>
           </ul>
         </div>
-
-        <div className="w-full">
-          <h4>Suscribe to our newsletter</h4>
-          <input />
-          <button>Suscribe</button>
-        </div>
       </div>
-      <div className="glass flex flex-col items-center justify-center py-[5px]">
-        <h4>&copy;{new Date().getFullYear()} Data for Impact.</h4>
-        <h4>All rights reserved</h4>
+
+      <div className=" text-[#edeef270] text-[13px] flex items-center justify-center py-[5px]">
+        <h4>
+          &copy;{new Date().getFullYear()} Data for Impact. All rights reserved
+        </h4>
       </div>
     </footer>
   );

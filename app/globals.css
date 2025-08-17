@@ -18,6 +18,8 @@
   font-family: "Montserrat", sans-serif;
 }
 
+
+
 @utility about-image {
   @apply absolute top-1/2 left-1/2 w-[200px] h-[200px] -translate-x-1/2 -translate-y-1/2 rounded-full overflow-hidden border-double border-[5px];
 }

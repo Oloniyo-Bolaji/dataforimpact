@@ -43,4 +43,22 @@ Quisque fermentum pretium risus sed luctus. Integer id pretium nunc. Nam venenat
 <div className="hexagon bg-[url('/laptopgan.png')] lg:h-[400px] lg:w-[400px] sm:h-[300px] sm:w-[300px] h-[200px] w-[200px] bg-cover bg-center shadow-xl shadow-gray-500/50">
           </div>
 
-          <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-2 py-0.5 rounded-full">
+ <div className="glass flex justify-between items-center px-[30px] py-[5px]">
+        <h4>Get connected with us on social media</h4>
+        <div className="flex gap-[10px] text-[16px]">
+          <a href="">
+            <FaLinkedin />
+          </a>
+          <a href="">
+            <FaSquareFacebook />
+          </a>
+          <a href="">
+            <FaSquareInstagram />
+          </a>
+          <a href="">
+            <FaXTwitter />
+          </a>
+        </div>
+      </div>
+
+       
