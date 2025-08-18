@@ -24,7 +24,7 @@ const About = () => {
     x: -110,
     y: -70,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.6,
     ease: "power2.out",
   });
 
@@ -37,7 +37,7 @@ const About = () => {
     x: 110,
     y: -70,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.6,
     ease: "power2.out",
   });
 
@@ -50,7 +50,7 @@ const About = () => {
     x: 0,
     y: 120,
     opacity: 1,
-    duration: 0.5,
+    duration: 0.6,
     ease: "power2.out",
   });
 

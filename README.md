@@ -61,4 +61,11 @@ Quisque fermentum pretium risus sed luctus. Integer id pretium nunc. Nam venenat
         </div>
       </div>
 
-       
+       <div className="flex items-center justify-center">
+          <a
+            href=""
+            className="flex items-center justify-center gap-2 w-[200px] rounded-[15px] bg-[#00808090] p-[8px] text-[14px] text-white hover:bg-[#008080] transition"
+          >
+            Get Started
+          </a>
+        </div>

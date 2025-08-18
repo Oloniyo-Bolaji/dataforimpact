@@ -1,8 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { services } from "@/lib/data";
 import { Montserrat } from "next/font/google";
+import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+gsap.registerPlugin(useGSAP);
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -10,11 +15,31 @@ const montserrat = Montserrat({
 });
 
 const Service = () => {
+   const staggerRef = useRef();
+
+  useGSAP(() => {
+    const boxes = gsap.utils.toArray(staggerRef.current.children);
+
+    gsap.from(boxes, {
+      x: -100,
+      opacity: 0,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: staggerRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+  }, []);
 
   return (
     <div className="px-[30px]">
       <h3 className="headings">What we offer</h3>
-      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-full gap-[20px] py-[10px]">
+      <div
+        ref={staggerRef}
+        className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-full gap-[20px] py-[10px]"
+      >
         {services.map((service, index) => {
           return (
             <div

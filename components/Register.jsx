@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 
 const Register = () => {
   return (
-    <div className="sm:px-[100px] py-[20px] px-[20px] ">
+    <div className="sm:px-[100px] sm:py-[20px] py-[10px] px-[20px] ">
       <div className="back bg-[#2b4063] flex sm:flex-row flex-col gap-[20px] justify-between sm:p-[80px] p-[40px] rounded-[20px]">
         <div className="">
           <h1
@@ -30,18 +30,18 @@ const Register = () => {
             Don’t miss your chance to become part of our next bootcamp cohort.
           </p>
         </div>
-         <div className="w-full">
-          <h4>Suscribe to our newsletter</h4>
-          <input />
-          <button>Suscribe</button>
-        </div>
-        <div className="flex items-center justify-center">
-          <a
-            href=""
-            className="flex items-center justify-center gap-2 w-[200px] rounded-[15px] bg-[#00808090] p-[8px] text-[14px] text-white hover:bg-[#008080] transition"
-          >
-            Get Started
-          </a>
+        <div className="flex flex-col items-center justify-center gap-[10px]">
+          <h4 className="text-[#edeef2] font-bold">
+            Suscribe to our newsletter
+          </h4>
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            className="bg-[linear-gradient(145deg,#273a59,#2e446a)] shadow-[24px_24px_48px_#263857,-24px_-24px_48px_#30486f] w-[350px] h-[50px] placeholder:text-[13px] outline-0 rounded-[10px] caret-[#edeef2] text-[#edeef2] p-[5px] box-border"
+          />
+          <button className="w-[200px] rounded-[15px] bg-[#00808090] p-[8px] text-[14px] text-white hover:bg-[#008080] transition">
+            Suscribe
+          </button>
         </div>
       </div>
     </div>
