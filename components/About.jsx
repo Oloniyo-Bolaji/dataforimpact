@@ -14,58 +14,56 @@ const montserrat = Montserrat({
 });
 
 const About = () => {
- useGSAP(() => {
-  const anim1 = gsap.to(".first", {
-    scrollTrigger: {
-      trigger: ".first",
-      start: "top 60%",
-      toggleActions: "play none none none",
-    },
-    x: -110,
-    y: -70,
-    opacity: 1,
-    duration: 0.6,
-    ease: "power2.out",
-  });
+  useGSAP(() => {
+    const anim1 = gsap.to(".first", {
+      scrollTrigger: {
+        trigger: ".first",
+        start: "top 60%",
+        toggleActions: "play none none none",
+      },
+      x: -110,
+      y: -70,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power2.out",
+    });
 
-  const anim2 = gsap.to(".second", {
-    scrollTrigger: {
-      trigger: ".second",
-      start: "top 60%",
-      toggleActions: "play none none none",
-    },
-    x: 110,
-    y: -70,
-    opacity: 1,
-    duration: 0.6,
-    ease: "power2.out",
-  });
+    const anim2 = gsap.to(".second", {
+      scrollTrigger: {
+        trigger: ".second",
+        start: "top 60%",
+        toggleActions: "play none none none",
+      },
+      x: 110,
+      y: -70,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power2.out",
+    });
 
-  const anim3 = gsap.to(".third", {
-    scrollTrigger: {
-      trigger: ".third",
-      start: "top 60%",
-      toggleActions: "play none none none",
-    },
-    x: 0,
-    y: 120,
-    opacity: 1,
-    duration: 0.6,
-    ease: "power2.out",
-  });
+    const anim3 = gsap.to(".third", {
+      scrollTrigger: {
+        trigger: ".third",
+        start: "top 60%",
+        toggleActions: "play none none none",
+      },
+      x: 0,
+      y: 120,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power2.out",
+    });
 
-  return () => {
-    anim1.kill();
-    anim2.kill();
-    anim3.kill();
-  };
-}, []);
+    return () => {
+      anim1.kill();
+      anim2.kill();
+      anim3.kill();
+    };
+  }, []);
 
   return (
-    <div className="my-[50px] flex-col-center gap-[20px]">
-
-      <div className="max-w-screen-xl lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col sm:gap-[20px] gap-[100px]">
-
+    <div className="my-[50px] ">
+      <div className="max-w-screen-xl flex-col-center lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col sm:gap-[20px] gap-[100px]">
         <div className="sm:w-[50%] w-full sm:flex-center hidden h-full">
           <div className="relative w-[300px] h-[300px] mx-auto">
             {/* First image */}
