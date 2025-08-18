@@ -1,8 +1,8 @@
-//import aboutSchema from "./about-schema";
+import authorSchema from "./author-schema"
+import blogArticlesSchema from "./blogArticle-schema"
 
 
-
-const schemas = []
+const schemas = [blogArticlesSchema, authorSchema]
 
 
 export default schemas
