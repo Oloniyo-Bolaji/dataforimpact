@@ -33,7 +33,7 @@ const Metrics = () => {
 
   return (
     <div className="px-[20px] mt-[100px] mb-[50px]">
-      <div className="w-full h-full flex justify-center items-center">
+      <div className="max-w-screen-xl w-full h-full flex justify-center items-center">
         <div className="grid sm:grid-cols-4 grid-cols-1 gap-[30px] sm:shadow-[5px_5px_10px_#7A7A7A]">
           {metrics.map((metric, index) => {
             return (

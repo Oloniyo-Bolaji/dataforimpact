@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 
 const Register = () => {
   return (
-    <div className="sm:px-[100px] sm:py-[20px] py-[10px] px-[20px] ">
+    <div className="max-w-screen-xl sm:px-[100px] sm:py-[20px] py-[10px] px-[20px] ">
       <div className="back bg-[#2b4063] flex sm:flex-row flex-col gap-[20px] justify-between sm:p-[80px] p-[40px] rounded-[20px]">
         <div className="">
           <h1
@@ -37,7 +37,7 @@ const Register = () => {
           <input
             type="email"
             placeholder="Enter your email address"
-            className="bg-[linear-gradient(145deg,#273a59,#2e446a)] shadow-[24px_24px_48px_#263857,-24px_-24px_48px_#30486f] sm:w-[350px] w-full h-[50px] placeholder:text-[13px] outline-0 rounded-[10px] caret-[#edeef2] text-[#edeef2] p-[5px] box-border"
+            className="bg-[linear-gradient(145deg,#273a59,#2e446a)] shadow-[24px_24px_48px_#263857,-24px_-24px_48px_#30486f] sm:w-[350px] w-full h-[50px] placeholder:text-[13px] outline-0 caret-[#edeef2] text-[#edeef2] p-[5px] box-border"
           />
           <button className="w-[200px] rounded-[15px] bg-[#00808090] p-[8px] text-[14px] text-white hover:bg-[#008080] transition">
             Suscribe
