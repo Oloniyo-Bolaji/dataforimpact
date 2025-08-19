@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaXTwitter,
   FaLinkedin,
@@ -20,10 +20,61 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+gsap.registerPlugin(ScrollToPlugin);
+function getSamePageAnchor(link) {
+  const { protocol, host, pathname, search } = window.location;
+  return link.protocol === protocol &&
+    link.host === host &&
+    link.pathname === pathname &&
+    link.search === search &&
+    link.hash
+    ? link.hash
+    : null;
+}
+
+function scrollToHash(hash, e) {
+  const elem = hash ? document.querySelector(hash) : null;
+  if (elem) {
+    if (e) e.preventDefault();
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: {
+        y: elem,
+        offsetY: 100,
+      },
+    });
+  }
+}
+const options = { next: { revalidate: 30 } };
+
+
 const Footer = () => {
+  useEffect(() => {
+    const anchorHandler = (e) => {
+      const target = e.currentTarget;
+      const hash = getSamePageAnchor(target);
+      if (hash) {
+        scrollToHash(hash, e);
+      }
+    };
+
+    const allLinks = Array.from(document.querySelectorAll("a[href^='#']"));
+    allLinks.forEach((link) => {
+      link.addEventListener("click", anchorHandler);
+    });
+
+    scrollToHash(window.location.hash);
+
+    return () => {
+      allLinks.forEach((link) => {
+        link.removeEventListener("click", anchorHandler);
+      });
+    };
+  }, []);
+
   return (
     <footer className="bg-[#2b4063]">
-      <div className="max-w-screen-xl flex flex-col px-[20px]">
+      <div className="max-w-screen-xl mx-auto flex flex-col px-[20px]">
         <div className="flex sm:flex-row flex-col justify-between sm:gap-[100px] gap-[10px] py-[20px] px-[10px]">
           <div className="flex flex-col gap-[20px]">
             <h1
@@ -71,19 +122,19 @@ const Footer = () => {
             </h5>
             <ul className="flex flex-col gap-[5px] text-[#edeef270] text-[14px]">
               <li>
-                <a href="">About Us</a>
+                <a href="#about">About Us</a>
               </li>
               <li>
-                <a href="">Services</a>
+                <a href="#services">Services</a>
               </li>
               <li>
-                <a href="">Mentors</a>
+                <a href="#mentors">Mentors</a>
               </li>
               <li>
-                <a href="">FAQs</a>
+                <a href="#faqs">FAQs</a>
               </li>
               <li>
-                <a href="">Reviews</a>
+                <a href="#reviews">Reviews</a>
               </li>
               <li>
                 <Link href="/blog">Blog</Link>

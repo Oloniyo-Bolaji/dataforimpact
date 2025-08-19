@@ -19,8 +19,8 @@ const FAQs = () => {
   };
 
   return (
-    <div className="my-[20px] bg-[#2b4063]">
-      <div className="max-w-screen-xl flex sm:flex-row flex-col gap-[10px] sm:p-[50px] p-[20px]">
+    <div id="faqs" className="my-[20px] bg-[#2b4063]">
+      <div className="max-w-screen-xl mx-auto flex sm:flex-row flex-col gap-[10px] sm:p-[50px] p-[20px]">
         <div className="sm:w-[35%] w-full flex flex-col justify-center items-center text-center">
           <h3 className="headings text-[#edeef2]">
             Frequently asked questions

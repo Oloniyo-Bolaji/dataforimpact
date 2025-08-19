@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Graduates = () => {
   return (
-    <div className="max-w-screen-xl py-[10px]">
+    <div className="max-w-screen-xl mx-auto py-[10px]">
       <h4 className="headings"> Meet Some of our alumni</h4>
       <p className="text-center">
         Some of the amazing people who have been mentored by us

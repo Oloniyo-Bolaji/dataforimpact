@@ -34,8 +34,8 @@ const Service = () => {
   }, []);
 
   return (
-    <div className="px-[30px]">
-      <div className="max-w-screen-xl w-full">
+    <div id="services" className="px-[30px]">
+      <div className="max-w-screen-xl mx-auto w-full">
         <h3 className="headings">What we offer</h3>
         <div
           ref={staggerRef}

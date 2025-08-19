@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 
 const Register = () => {
   return (
-    <div className="max-w-screen-xl sm:px-[100px] sm:py-[20px] py-[10px] px-[20px] ">
+    <div className="max-w-screen-xl mx-auto sm:px-[100px] sm:py-[20px] py-[10px] px-[20px] ">
       <div className="back bg-[#2b4063] flex sm:flex-row flex-col gap-[20px] justify-between sm:p-[80px] p-[40px] rounded-[20px]">
         <div className="">
           <h1

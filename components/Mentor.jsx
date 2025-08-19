@@ -7,7 +7,7 @@ import { mentors } from "@/lib/data";
 
 const Mentor = () => {
   return (
-    <div className="max-w-screen-xl">
+    <div id="mentors" className="max-w-screen-xl mx-auto">
       <h3 className="headings">Meet The Mentors</h3>
       <main className="grid sm:grid-cols-3 grid-cols-1 gap-[30px] px-[50px]">
         {mentors.map((mentor) => {
