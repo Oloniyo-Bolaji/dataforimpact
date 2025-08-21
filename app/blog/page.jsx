@@ -30,9 +30,13 @@ const Blog = async () => {
       </div>
       <main className="py-[20px] sm:px-[30px] px-[10px]">
         <div className="max-w-screen-xl w-full grid grid-cols-1 sm:grid-cols-3 gap-[10px] items-start">
-          {articles.map((article, index) => (
-            <BlogCard article={article} key={article._id} index={index} />
-          ))}
+          {articles.length > 0 ? (
+            articles.map((article, index) => (
+              <BlogCard article={article} key={article._id} index={index} />
+            ))
+          ) : (
+            <div>No Blog</div>
+          )}
         </div>
       </main>
     </div>

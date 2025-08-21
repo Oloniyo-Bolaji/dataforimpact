@@ -16,8 +16,8 @@ export default function Home() {
     <div className="">
       <Hero />
       <Announcement />
-      <About />
       <Metrics />
+      <About />
       <Service />
       <Partners />
       <FAQs />

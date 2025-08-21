@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Partners = () => {
   return (
-    <div className="my-[20px] py-[10px] shadow-[0_2px_5px_#7a7a7a,0_-2px_5px_#7a7a7a]">
+    <div className="my-[50px] py-[10px] shadow-[0_2px_5px_#7a7a7a50,0_-2px_5px_#7a7a7a50]">
       <div className="max-w-screen-xl mx-auto">
         <h3 className="headings">Our Sponsors & Partners</h3>
         <Marquee

@@ -37,7 +37,7 @@ const Hero = () => {
 
   return (
     <div className="lg:h-screen sm:h-[1000px] h-[600px] bg-repeat bg-cover bg-center bg-[#ffffff] my-background p-[10px]">
-      <div className="max-w-screen-xl hero mx-auto flex lg:justify-between justify-center items-center lg:flex-row sm:flex-row flex-col lg:px-[60px] sm:px-[30px] px-[15px] h-full my-[20px]">
+      <div className="max-w-screen-xl hero mx-auto flex lg:justify-between justify-center items-center lg:flex-row sm:flex-row flex-col h-full lg:px-[60px] sm:px-[30px] px-[15px] my-[30px]">
         <div className="lg:max-w-lg sm:max-w-sm flex flex-col gap-[10px] lg:items-start sm:items-center items-center lg:text-left  sm:text-center text-center">
           <h1
             className={`${montserrat.className} mt-[10px] sm:text-[50px] text-[35px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[50px] leading-[35px]`}
@@ -49,7 +49,7 @@ const Hero = () => {
             </span>{" "}
             Skills That Get You Hired
           </h1>
-          <p className="sm:text-[17px] text-[14px] text-[#7a7a7a] font-normal leading-[25px]">
+          <p className="sm:text-[17px] text-[14px] text-[#00274D] font-medium leading-[25px]">
             Hands-on data training with real-world projects; Flexible,
             beginner-friendly, and industry-focused. Get Taught and Mentored by
             experienced analysts and data scientists.

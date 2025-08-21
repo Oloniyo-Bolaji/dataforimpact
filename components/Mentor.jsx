@@ -9,6 +9,7 @@ const Mentor = () => {
   return (
     <div id="mentors" className="max-w-screen-xl mx-auto">
       <h3 className="headings">Meet The Mentors</h3>
+      <p className="text-center sm:text-[15px] text-[13px] text-[#7a7a7a] font-normal leading-[22px] sm:max-w-[500px] mx-auto">Our Passionate, Expert and Proactive Mentors</p>
       <main className="grid sm:grid-cols-3 grid-cols-1 gap-[30px] px-[50px]">
         {mentors.map((mentor) => {
           return (

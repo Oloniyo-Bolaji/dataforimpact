@@ -45,7 +45,7 @@ const Service = () => {
             return (
               <div
                 key={index}
-                className="flex flex-col justify-center items-center gap-[10px] w-full bg-[#e9eaef] shadow-[2px_2px_3px_#7a7a7a] p-[10px] rounded-[10px]"
+                className="flex flex-col justify-center items-center gap-[10px] w-full bg-[#7a7a7a10] shadow-[2px_2px_3px_#7a7a7a50] p-[10px] rounded-[10px]"
               >
                 <div className="w-[20%] flex justify-center items-center">
                   <span

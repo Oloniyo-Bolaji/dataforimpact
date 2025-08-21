@@ -38,8 +38,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum.
 Aenean bibendum orci eu gravida vulputate. Integer dignissim magna sit amet purus suscipit, a faucibus erat mattis.
 Quisque fermentum pretium risus sed luctus. Integer id pretium nunc. Nam venenatis enim et odio laoreet, sed eleifend mauris condimentum.
-     
-
-<div className="hexagon bg-[url('/laptopgan.png')] lg:h-[400px] lg:w-[400px] sm:h-[300px] sm:w-[300px] h-[200px] w-[200px] bg-cover bg-center shadow-xl shadow-gray-500/50">
-          </div>
 
