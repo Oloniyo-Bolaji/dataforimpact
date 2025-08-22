@@ -62,8 +62,43 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about" className="my-[50px] ">
-      <div className="max-w-screen-xl  flex-col-center lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col sm:gap-[20px] gap-[100px]">
+    <div id="about" className="sm:pt-[70px] sm:pb-[100px] py-[10px]">
+      <div className="max-w-screen-xl  mx-auto flex-col-center lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col sm:gap-[20px] gap-[100px]">
+       
+        <div className="sm:w-[50%] w-full flex gap-[10px] items-center">
+          <p className="headings vertical-sentence">Who We Are </p>
+          <div className="flex flex-col gap-[10px]">
+            {/**mission statement */}
+            <div className="flex flex-col gap-[10px]">
+              <h4
+                className={`${montserrat.className} sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]`}
+              >
+                Our mission statement
+              </h4>
+              <p className="text-justify border-l-[4px] border-[#1e365b] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
+                To empower individual, communities, and systems across health
+                and livelihood sectors with data-driven solutions, by designing
+                innovative monitoring systems, building loacal capacity, and
+                applying artifcial intelligence and digital tools to improve
+                decision-makin, resilience, and sustainable development.
+              </p>
+            </div>
+            {/**vision statement */}
+            <div className="flex flex-col gap-[10px]">
+              <h4
+                className={`${montserrat.className} sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]`}
+              >
+                Our vision statement
+              </h4>
+              <p className="text-justify border-l-[4px] border-[#1e365b] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
+                To improve lives we may never meet by applying data science,
+                artificial intelligence, and digital innovation to drive
+                sustainable impact in gloabal health and livelihoods.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="sm:w-[50%] w-full sm:flex-center hidden h-full">
           <div className="relative w-[300px] h-[300px] mx-auto">
             {/* First image */}
@@ -94,42 +129,6 @@ const About = () => {
                 fill
                 className="object-cover rounded-full"
               />
-            </div>
-          </div>
-        </div>
-
-        <div className="sm:w-[50%] w-full flex gap-[10px] items-center">
-          <p className="headings vertical-sentence">Who We Are </p>
-          <div className="flex flex-col gap-[10px]">
-            {/**mission statement */}
-            <div className="flex flex-col gap-[10px]">
-              <h4
-                className={`${montserrat.className} sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]`}
-              >
-                Our mission statement
-              </h4>
-              <p className="text-justify border-l-[4px] border-[#1e365b] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                efficitur orci vel lectus cursus, vel ultrices tortor interdum.
-                Aenean bibendum orci eu gravida vulputate. Integer dignissim
-                magna sit amet purus suscipit, a faucibus erat mattis.Aenean
-                bibendum orci eu gravida vulputate.
-              </p>
-            </div>
-            {/**vision statement */}
-            <div className="flex flex-col gap-[10px]">
-              <h4
-                className={`${montserrat.className} sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]`}
-              >
-                Our vision statement
-              </h4>
-              <p className="text-justify border-l-[4px] border-[#1e365b] text-[#00274D60] sm:text-[15px] text-[13px] leading-[25px] pl-[10px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                efficitur orci vel lectus cursus, vel ultrices tortor interdum.
-                Aenean bibendum orci eu gravida vulputate. Integer dignissim
-                magna sit amet purus suscipit, a faucibus erat mattis.Aenean
-                bibendum orci eu gravida vulputate.
-              </p>
             </div>
           </div>
         </div>

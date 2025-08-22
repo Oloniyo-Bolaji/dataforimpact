@@ -14,7 +14,7 @@ const Blog = async () => {
   const articles = await client.fetch(getArticles, {}, options);
   return (
     <div className="relative py-[30px]">
-      <div className="max-w-screen-xl back bg-[#2b4063] sm:h-[250px] h-[150px] flex justify-center items-center">
+      <div className="max-w-screen-xl back bg-no-repeat sm:bg-scroll bg-fixed bg-left-top bg-[#ffffff] sm:h-[250px] h-[150px] flex justify-center items-center">
         <div>
           <h1
             className={`${montserrat.className} mt-[10px] sm:text-[45px] text-[25px] text-[#008080] sm:font-extrabold font-bold sm:leading-[50px] leading-[35px]`}

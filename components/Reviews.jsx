@@ -31,7 +31,7 @@ const Reviews = () => {
     };
   }, []);
   return (
-    <div   id="reviews" className="sm:my-[30px] px-[30px] ">
+    <div   id="reviews" className="sm:my-[30px] my-[20px] px-[30px] ">
       <div className="max-w-screen-xl mx-auto min-h-[400px]">
         <div className="heading">
           <h3 className="headings">Impact Stories</h3>

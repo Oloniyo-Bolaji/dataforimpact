@@ -8,19 +8,19 @@ import Metrics from "@/components/Metrics";
 import Partners from "@/components/Partners";
 import Register from "@/components/Register";
 import Reviews from "@/components/Reviews";
-import Service from "@/components/Service";
+import Importance from "@/components/Importance";
 
 export default function Home() {
   return (
     <div className="">
       <Hero />
-      <Announcement />      
-      <About />
+      <Announcement />
       <Metrics />
-      <Service />
+      <About />
+      <Importance />
       <Partners />
       <FAQs />
-      <Mentor />
+      {/*<Mentor />*/}
       <Reviews />
       <Register />
       <Graduates />

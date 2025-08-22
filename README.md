@@ -39,3 +39,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel 
 Aenean bibendum orci eu gravida vulputate. Integer dignissim magna sit amet purus suscipit, a faucibus erat mattis.
 Quisque fermentum pretium risus sed luctus. Integer id pretium nunc. Nam venenatis enim et odio laoreet, sed eleifend mauris condimentum.
 
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);

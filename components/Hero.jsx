@@ -56,7 +56,7 @@ const Hero = () => {
           </p>
           <a
             href="/"
-            className="inline-flex items-center justify-center gap-2 w-[200px] rounded-[15px] bg-[#008080] p-[8px] text-[14px] text-white hover:bg-[#006666] transition"
+            className="inline-flex items-center justify-center animate-pulse gap-2 w-[200px] rounded-[15px] bg-[#008080] p-[8px] text-[14px] text-white hover:bg-[#006666] transition"
           >
             <span>Join the Next Cohort</span>
             <FaArrowRight />

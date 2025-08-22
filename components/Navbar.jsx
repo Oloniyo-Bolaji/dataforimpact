@@ -16,11 +16,9 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [logo, setLogo] = useState(null);
- 
 
   const toggle = () => {
     setShowMenu(!showMenu);
@@ -56,9 +54,9 @@ const Navbar = () => {
           <Link href="/" className="text-[16px] text-[#00274D]">
             <span>Home</span>
           </Link>
-          {/*<Link href="/company" className="text-[16px]">
+          <Link href="/company" className="text-[16px]">
             <span>Company</span>
-          </Link>*/}
+          </Link>
           <Link href="/blog" className="text-[16px]">
             <span>Blog</span>
           </Link>
