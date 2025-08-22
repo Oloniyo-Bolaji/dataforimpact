@@ -62,7 +62,7 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about" className="my-[100px] ">
+    <div id="about" className="my-[50px] ">
       <div className="max-w-screen-xl  flex-col-center lg:px-[50px] sm:px-[30px] px-[20px] flex sm:flex-row flex-col sm:gap-[20px] gap-[100px]">
         <div className="sm:w-[50%] w-full sm:flex-center hidden h-full">
           <div className="relative w-[300px] h-[300px] mx-auto">

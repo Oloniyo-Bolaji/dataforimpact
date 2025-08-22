@@ -5,6 +5,7 @@ import { PortableText } from "next-sanity";
 import Image from "next/image";
 import React, { useRef } from "react";
 import gsap from "gsap";
+import getReadingTime from "@/lib/readTime";
 
 const cardRefs = [];
 
@@ -17,6 +18,8 @@ const BlogCard = ({ article, index }) => {
       .map((block) => block.children?.map((child) => child.text).join("") || "")
       .join("\n");
   };
+
+  const previewText = getPlainText(article.content).slice(0, 120) + "...";
 
   const handleEnter = () => {
     gsap.to(cardRef.current, {
@@ -42,7 +45,7 @@ const BlogCard = ({ article, index }) => {
       }}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
-      className="p-[20px] rounded-md shadow-[0_4px_8px_rgba(128,128,128,0.2)] transition-transform"
+      className="p-[20px] rounded-md shadow-[0_4px_8px_#7a7a7a50] transition-transform"
     >
       {article.coverImage && (
         <div className="w-full h-[200px] relative">
@@ -51,26 +54,39 @@ const BlogCard = ({ article, index }) => {
             alt="image"
             fill
             sizes="auto"
-            className="object-contain"
+            className="object-cover"
             priority
           />
         </div>
       )}
-      <div className="mt-2">
-        <div className="text-[10px] text-desc mb-1">
-          <span>Bolaji</span> ·{" "}
-          <span>
-            {new Date(article.publishedAt).toLocaleDateString("en-GB", {
-              day: "numeric",
-              month: "short",
-              year: "numeric",
-            })}
-          </span>
+      <div className="mt-[10px]">
+        <div className="flex items-center">
+          <p className="text-center text-[#7a7a7a]">{getReadingTime(article.content)}</p>
         </div>
-        <h2 className="text-[15px] font-semibold mb-1 text-text">
-          {article.title}
-        </h2>
-        <p className="text-[12px] text-desc"></p>
+        <h3 className="text-[15px] font-semibold">{article.title}</h3>
+        <p className="text-[12px] text-desc">{previewText}</p>
+        <div className="flex gap-[10px] items-center">
+          <div className="relative h-[30px] w-[30px] rounded-full border border-[black]">
+            <Image
+              src={urlFor(article.author.profilePicture?.asset).url()}
+              alt="image"
+              fill
+              sizes="auto"
+              className="object-contain rounded-full"
+              priority
+            />
+          </div>
+          <div className="flex flex-col text-[14px] text-[#7a7a7a]">
+            <span className="font-medium">{article.author.name}</span>
+            <span>
+              {new Date(article.publishedAt).toLocaleDateString("en-GB", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+              })}
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

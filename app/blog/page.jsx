@@ -12,7 +12,6 @@ const options = { next: { revalidate: 30 } };
 
 const Blog = async () => {
   const articles = await client.fetch(getArticles, {}, options);
-  console.log(articles);
   return (
     <div className="relative py-[30px]">
       <div className="max-w-screen-xl back bg-[#2b4063] sm:h-[250px] h-[150px] flex justify-center items-center">
@@ -29,7 +28,7 @@ const Blog = async () => {
         </div>
       </div>
       <main className="py-[20px] sm:px-[30px] px-[10px]">
-        <div className="max-w-screen-xl w-full grid grid-cols-1 sm:grid-cols-3 gap-[10px] items-start">
+        <div className="max-w-screen-xl w-full grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-[10px] items-start">
           {articles.length > 0 ? (
             articles.map((article, index) => (
               <BlogCard article={article} key={article._id} index={index} />

@@ -25,8 +25,8 @@ const FAQs = () => {
           <h3 className="headings text-[#edeef2]">
             Frequently asked questions
           </h3>
-          <p className="text-[#edeef270] sm:text-[20px] text-[15px]">
-            Get answers to the frequently asked questions
+          <p className="text-[#edeef270] sm:text-[15px] text-[13px]">
+            Get answers to your questions and learn more about our bootcamp, programs and registration process.
           </p>
         </div>
 

@@ -16,9 +16,11 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [logo, setLogo] = useState(null);
+ 
 
   const toggle = () => {
     setShowMenu(!showMenu);
@@ -51,7 +53,7 @@ const Navbar = () => {
           }}
           className={`${montserrat.className} flex capitalize sm:flex-row text-[20px] sm:gap-[20px] list-none ${showMenu ? "flex flex-col gap-[10px] justify-center items-center p-[10px]" : ""}`}
         >
-          <Link href="/" className="text-[16px] text-[#7A7A7A]">
+          <Link href="/" className="text-[16px] text-[#00274D]">
             <span>Home</span>
           </Link>
           {/*<Link href="/company" className="text-[16px]">
