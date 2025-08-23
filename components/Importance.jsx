@@ -36,7 +36,7 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <div id="services ">
+    <div>
       <div className="mx-auto max-w-screen-xl">
         {/* Headings shown on only small screen */}
         <h3 className="sm:hidden headings text-center my-[20px]">

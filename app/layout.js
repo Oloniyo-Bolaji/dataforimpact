@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
 import Footer from "@/components/Footer";
 import { IBM_Plex_Sans } from "next/font/google";
 
@@ -10,6 +10,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-plus-jakarta",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
@@ -26,7 +31,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
-      <body className={`${plexSans.className}`}>
+      <body className={`${montserrat.className}`}>
         <Navbar />
         <div className="mt-[80px]">{children}</div>
         <Footer />
