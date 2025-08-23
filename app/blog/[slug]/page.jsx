@@ -6,8 +6,10 @@ import React from "react";
 
 const options = { next: { revalidate: 30 } };
 
-const page = async () => {
-  const article = await client.fetch(getArticle, {}, options);
+const page = async ({params}) => {
+  const { slug } = params; 
+
+  const article = await client.fetch(getArticle, {slug});
   return (
     <div>
       <PortableText></PortableText>
