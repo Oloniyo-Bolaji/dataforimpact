@@ -28,6 +28,13 @@ const Partners = () => {
             height={100}
             className="mx-8 h-auto w-auto"
           />
+          <Image
+            src="/bayero.png"
+            alt="Bayero University logo"
+            width={200}
+            height={30}
+            className="mx-8 h-auto w-auto"
+          />
         </Marquee>
       </div>
     </div>

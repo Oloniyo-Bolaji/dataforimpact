@@ -18,7 +18,7 @@ const Blog = async () => {
     <div className="">
       <Header heading="Our Blog" />
       <main className="max-w-screen-xl mx-auto py-[20px] sm:px-[30px] px-[10px]">
-        {articles.length < 0 ? (
+        {articles.length > 0 ? (
           <div className=" w-full grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-[10px] items-start">
             {articles.map((article, index) => (
               <BlogCard article={article} key={article._id} index={index} />

@@ -7,7 +7,7 @@ const Service = () => {
   return (
     <div id="services" className="my-[20px]">
       <h3 className="headings">Our Core Services</h3>
-      <div className="my-[10px] grid sm:grid-cols-3 grid-cols-1 gap-[20px] sm:px-[50px] px-[15px]">
+      <div className="my-[10px] grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[20px] sm:px-[50px] px-[15px]">
         {" "}
         {coreServices.map((service, index) => (
           <ServiceCard key={index} service={service}/>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import gsap from "gsap";
 import getReadingTime from "@/lib/readTime";
+import Link from "next/link";
 
 const cardRefs = [];
 
@@ -60,11 +61,15 @@ const BlogCard = ({ article, index }) => {
         </div>
       )}
       <div className="mt-[10px]">
-        <div className="flex items-center">
-          <p className="text-center text-[#7a7a7a]">{getReadingTime(article.content)}</p>
+        <div className="flex items-center justify-end">
+          <p className="text-[14px] text-[#7a7a7a]">
+            {getReadingTime(article.content)}
+          </p>
         </div>
         <h3 className="text-[15px] font-semibold">{article.title}</h3>
-        <p className="text-[12px] text-desc">{previewText}</p>
+        <p className="text-[12px] text-desc">
+          {previewText} <Link href={`/blog/${article.slug}`} className="text-[red]">Read more</Link>{" "}
+        </p>
         <div className="flex gap-[10px] items-center">
           <div className="relative h-[30px] w-[30px] rounded-full border border-[black]">
             <Image
@@ -76,8 +81,8 @@ const BlogCard = ({ article, index }) => {
               priority
             />
           </div>
-          <div className="flex flex-col text-[14px] text-[#7a7a7a]">
-            <span className="font-medium">{article.author.name}</span>
+          <div className="flex flex-col text-[13px] text-[#7a7a7a]">
+            <span className="font-medium">{article.author.name ? article.author.name : "Anonymous"}</span>
             <span>
               {new Date(article.publishedAt).toLocaleDateString("en-GB", {
                 day: "numeric",
