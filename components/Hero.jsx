@@ -9,7 +9,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(useGSAP);
 
 const montserrat = Montserrat({
   subsets: ["latin"],

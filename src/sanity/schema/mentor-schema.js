@@ -1,6 +1,6 @@
 export default {
-  name: "author",
-  title: "Author",
+  name: "mentor",
+  title: "Mentor",
   type: "document",
   fields: [
     {
@@ -13,15 +13,25 @@ export default {
       title: "Slug",
       type: "slug",
       options: {
-        source: "name", 
+        source: "name",
         maxLength: 96,
       },
     },
-      {
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
       name: "profilePicture",
       title: "Profile Picture",
       type: "image",
       options: { hotspot: true },
     },
+    {
+      name: "linkedIn",
+      title: "LinkeIn",
+      type: "url",
+    }
   ],
 };

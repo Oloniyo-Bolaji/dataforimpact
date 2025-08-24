@@ -104,7 +104,7 @@ const About = () => {
             {/* First image */}
             <div className="first about-image border-[#00274D]">
               <Image
-                src="/laptopgan.png"
+                src="/about2.png"
                 alt=""
                 fill
                 className="object-cover rounded-full"
@@ -114,7 +114,7 @@ const About = () => {
             {/* Second image */}
             <div className="second about-image border-[#7A7A7A]">
               <Image
-                src="/about2.jpg"
+                src="/ai1.jpg"
                 alt=""
                 fill
                 className="object-cover rounded-full"

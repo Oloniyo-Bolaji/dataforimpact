@@ -16,18 +16,29 @@ export default {
         source: "title",
         maxLength: 96,
       },
+      description: "Always generate a slug",
     },
     {
-      name: "author",
-      title: "Author",
-      type: "reference", 
-      to: { type: "author" },
+      name: "mentor",
+      title: "Mentor",
+      type: "reference",
+      to: { type: "mentor" },
     },
     {
       name: "coverImage",
       title: "Cover Image",
       type: "image",
       options: { hotspot: true },
+      fields: [
+        {
+          name: "caption",
+          title: "Caption",
+          type: "string",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
     },
     {
       name: "content",
@@ -38,7 +49,7 @@ export default {
           type: "block",
         },
         {
-          type: "image", // for images in between text
+          type: "image",
           options: { hotspot: true },
           fields: [
             {

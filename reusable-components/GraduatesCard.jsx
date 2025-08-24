@@ -9,7 +9,7 @@ import { urlFor } from "@/lib/imageBuilder";
 
 const GraduatesCard = ({ graduates }) => {
   return (
-    <div className="flex items-center justify-center ">
+    <div className="flex items-center justify-center sm:h-[300px] h-[250px]">
       <div className="w-full max-w-md">
         <Swiper
           modules={[Autoplay]}

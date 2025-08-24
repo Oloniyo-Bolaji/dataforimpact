@@ -47,7 +47,6 @@ function scrollToHash(hash, e) {
 }
 const options = { next: { revalidate: 30 } };
 
-
 const Footer = () => {
   useEffect(() => {
     const anchorHandler = (e) => {
@@ -122,19 +121,19 @@ const Footer = () => {
             </h5>
             <ul className="flex flex-col gap-[5px] text-[#edeef270] text-[14px]">
               <li>
-                <a href="#about">About Us</a>
+                <Link href="/#about">About Us</Link>
               </li>
               <li>
-                <a href="#services">Services</a>
+                <Link href="/company#services">Services</Link>
               </li>
               <li>
-                <a href="#mentors">Mentors</a>
+                <Link href="/company#mentors">Mentors</Link>
               </li>
               <li>
-                <a href="#faqs">FAQs</a>
+                <Link href="/#faqs">FAQs</Link>
               </li>
               <li>
-                <a href="#reviews">Reviews</a>
+                <Link href="/#reviews">Reviews</Link>
               </li>
               <li>
                 <Link href="/blog">Blog</Link>

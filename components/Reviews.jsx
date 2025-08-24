@@ -1,16 +1,15 @@
 "use client";
 
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap/all";
+import gsap from "gsap";
 import React from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(useGSAP);
 
 const Reviews = () => {
   useGSAP(() => {
-    gsap.fromTo(
+    const animation = gsap.fromTo(
       ".heading",
       { scale: 0.5, opacity: 0 },
       {
@@ -30,8 +29,10 @@ const Reviews = () => {
       animation.kill();
     };
   }, []);
+
+  
   return (
-    <div   id="reviews" className="sm:my-[30px] my-[20px] px-[30px] ">
+    <div id="reviews" className="sm:my-[30px] my-[20px] px-[30px] ">
       <div className="max-w-screen-xl mx-auto min-h-[400px]">
         <div className="heading">
           <h3 className="headings">Impact Stories</h3>

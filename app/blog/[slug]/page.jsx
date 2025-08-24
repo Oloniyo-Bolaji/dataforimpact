@@ -1,18 +1,23 @@
-import { client } from "@/src/sanity/client";
-import { getArticle } from "@/src/sanity/queries";
-import { PortableText } from "next-sanity";
-import React from "react";
+"use client";
 
+import BlogContent from "@/components/BlogContent";
+import { useRouter } from "next/navigation";
+import { FaArrowLeft } from "react-icons/fa6";
 
-const options = { next: { revalidate: 30 } };
+const page = ({ params }) => {
+  const router = useRouter();
 
-const page = async ({params}) => {
-  const { slug } = params; 
-
-  const article = await client.fetch(getArticle, {slug});
   return (
-    <div>
-      <PortableText></PortableText>
+    <div className="mx-auto max-w-screen-xl">
+      <div className="flex flex-col gap-[20px] py-[20px] lg:px-[150px] sm:px-[100px] px-[20px]">
+        <div>
+          <button onClick={() => router.back()}>
+            <FaArrowLeft />
+          </button>
+        </div>
+
+        <BlogContent params={params} />
+      </div>
     </div>
   );
 };

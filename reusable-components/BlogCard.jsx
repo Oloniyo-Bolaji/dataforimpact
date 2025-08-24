@@ -68,12 +68,19 @@ const BlogCard = ({ article, index }) => {
         </div>
         <h3 className="text-[15px] font-semibold">{article.title}</h3>
         <p className="text-[12px] text-desc">
-          {previewText} <Link href={`/blog/${article.slug}`} className="text-[red]">Read more</Link>{" "}
+          {previewText}{" "}
+          <Link href={`/blog/${article.slug}`} className="text-[red]">
+            Read more
+          </Link>{" "}
         </p>
         <div className="flex gap-[10px] items-center">
           <div className="relative h-[30px] w-[30px] rounded-full border border-[black]">
             <Image
-              src={urlFor(article.author.profilePicture?.asset).url()}
+              src={
+                article.mentor?.profilePicture?.asset
+                  ? urlFor(article.mentor.profilePicture.asset).url()
+                  : "/user.png"
+              }
               alt="image"
               fill
               sizes="auto"
@@ -82,9 +89,11 @@ const BlogCard = ({ article, index }) => {
             />
           </div>
           <div className="flex flex-col text-[13px] text-[#7a7a7a]">
-            <span className="font-medium">{article.author.name ? article.author.name : "Anonymous"}</span>
+            <span className="font-medium">
+              {article.mentor?.name ? article.mentor.name : "Anonymous"}
+            </span>
             <span>
-              {new Date(article.publishedAt).toLocaleDateString("en-GB", {
+              {new Date(article._createdAt).toLocaleDateString("en-GB", {
                 day: "numeric",
                 month: "short",
                 year: "numeric",

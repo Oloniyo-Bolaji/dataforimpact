@@ -80,7 +80,7 @@ export default function ServicesSection() {
                   >
                     {service.service}
                   </h3>
-                  <p className="leading-[20px] text-[14px] text-[#00274D90] font-medium">
+                  <p className="leading-[20px] text-[14px] text-[#00274D90]">
                     {service.description}
                   </p>
                 </div>

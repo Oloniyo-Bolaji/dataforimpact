@@ -6,10 +6,6 @@ import React, { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
 import { Montserrat } from "next/font/google";
-//import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-//import gsap from "gsap";
-//import { getHero } from "@/src/sanity/queries";
-//import { client } from "@/src/sanity/client";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -49,9 +45,9 @@ const Navbar = () => {
           onClick={() => {
             if (showMenu) setShowMenu(false);
           }}
-          className={`${montserrat.className} flex capitalize sm:flex-row text-[20px] sm:gap-[20px] list-none ${showMenu ? "flex flex-col gap-[10px] justify-center items-center p-[10px]" : ""}`}
+          className={`${montserrat.className} flex capitalize sm:flex-row text-[20px] sm:gap-[20px] list-none  text-[#00274D] font-medium ${showMenu ? "flex flex-col gap-[10px] justify-center items-center p-[10px]" : ""}`}
         >
-          <Link href="/" className="text-[16px] text-[#00274D]">
+          <Link href="/" className="text-[16px]">
             <span>Home</span>
           </Link>
           <Link href="/company" className="text-[16px]">
