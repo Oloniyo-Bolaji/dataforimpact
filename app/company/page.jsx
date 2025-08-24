@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Mentor from "@/components/Mentor";
 import Service from "@/components/Service";

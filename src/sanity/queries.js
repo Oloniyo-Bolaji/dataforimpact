@@ -32,3 +32,11 @@ export const getGraduates = `*[_type == "graduates"]{
   slug,
   picture,
 }`;
+export const getMentors = `*[_type == "mentor"]{
+  _id,
+  name,
+  slug,
+  title,
+  profilePicture,
+  linkedIn
+}`;

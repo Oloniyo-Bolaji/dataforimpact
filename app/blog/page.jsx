@@ -2,14 +2,10 @@ import React from "react";
 import { client } from "@/src/sanity/client";
 import { getArticles } from "@/src/sanity/queries";
 import BlogCard from "@/reusable-components/BlogCard";
-import { Montserrat } from "next/font/google";
 import Header from "@/reusable-components/Header";
 import NoBlog from "@/components/NoBlog";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
+
 const options = { next: { revalidate: 30 } };
 
 const Blog = async () => {

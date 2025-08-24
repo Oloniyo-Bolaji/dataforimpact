@@ -30,7 +30,7 @@ export default {
     },
     {
       name: "linkedIn",
-      title: "LinkeIn",
+      title: "LinkedIn",
       type: "url",
     }
   ],

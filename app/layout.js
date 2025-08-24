@@ -1,16 +1,8 @@
-import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { IBM_Plex_Sans } from "next/font/google";
 
-const plexSans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "700"] });
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-plus-jakarta",
-});
 
 const montserrat = Montserrat({
   subsets: ["latin"],

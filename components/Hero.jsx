@@ -39,7 +39,7 @@ const Hero = () => {
       <div className="max-w-screen-xl hero mx-auto flex lg:justify-between justify-center items-center lg:flex-row sm:flex-row flex-col h-full lg:px-[60px] sm:px-[30px] px-[15px] my-[30px]">
         <div className="lg:max-w-lg sm:max-w-sm flex flex-col gap-[10px] lg:items-start sm:items-center items-center lg:text-left  sm:text-center text-center">
           <h1
-            className={`${montserrat.className} mt-[10px] sm:text-[50px] text-[35px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[50px] leading-[35px]`}
+            className="mt-[10px] sm:text-[50px] text-[35px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[50px] leading-[35px]"
           >
             Learn{" "}
             <span className="relative inline-block">

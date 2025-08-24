@@ -20,7 +20,6 @@ export default function Home() {
       <Importance />
       <Partners />
       <FAQs />
-      {/*<Mentor />*/}
       <Reviews />
       <Register />
       <Graduates />

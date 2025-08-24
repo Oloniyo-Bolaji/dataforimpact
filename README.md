@@ -38,3 +38,21 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur orci vel lectus cursus, vel ultrices tortor interdum.
 Aenean bibendum orci eu gravida vulputate. Integer dignissim magna sit amet purus suscipit, a faucibus erat mattis.
 Quisque fermentum pretium risus sed luctus. Integer id pretium nunc. Nam venenatis enim et odio laoreet, sed eleifend mauris condimentum.
+
+ const staggerRef = useRef();
+
+  useGSAP(() => {
+    const boxes = gsap.utils.toArray(staggerRef.current?.children || []);
+
+    gsap.from(boxes, {
+      y: 100,
+      opacity: 0,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: staggerRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+  }, []);
