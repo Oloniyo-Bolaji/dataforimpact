@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { Newsletter } from "@/emails/Newsletter";
+import  Newsletter  from "@/email/NewsLetter";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/database";
 import { suscribersTable } from "@/lib/database/schema";
