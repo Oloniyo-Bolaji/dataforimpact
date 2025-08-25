@@ -40,14 +40,14 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-screen-xl">
         {/* Headings shown on only small screen */}
         <h3 className="sm:hidden headings text-center my-[20px]">
-          Why Data for Impact
+          Why Data for Impact Bootcamp
         </h3>
 
         {/* ✅ Large screen circular layout */}
         <div className="hidden lg:block relative my-[150px] w-[500px] h-[500px] mx-auto">
           {/* Center div */}
           <div className="absolute top-1/2 left-1/2 rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white font-bold">
-            <h3 className="headings">Why Data for Impact</h3>
+            <h3 className="headings">Why Data for Impact Bootcamp</h3>
           </div>
 
           {/* Surrounding divs */}

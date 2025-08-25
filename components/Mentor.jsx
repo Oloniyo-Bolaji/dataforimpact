@@ -8,7 +8,6 @@ const options = { next: { revalidate: 30 } };
 
 const Mentor = async () => {
   const mentors = await client.fetch(getMentors, {}, options);
-  console.log(mentors)
   return (
     <div id="mentors" className="max-w-screen-xl mx-auto">
       <h3 className="headings">Meet The Mentors</h3>

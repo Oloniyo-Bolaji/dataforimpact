@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
 import { Montserrat } from "next/font/google";
+import { usePathname } from "next/navigation";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -13,8 +14,15 @@ const montserrat = Montserrat({
 });
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [showMenu, setShowMenu] = useState(false);
   const [logo, setLogo] = useState(null);
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/blog", label: "Blog" },
+    // { href: "/company", label: "Company" },
+  ];
 
   const toggle = () => {
     setShowMenu(!showMenu);
@@ -45,17 +53,20 @@ const Navbar = () => {
           onClick={() => {
             if (showMenu) setShowMenu(false);
           }}
-          className={`${montserrat.className} flex capitalize sm:flex-row text-[20px] sm:gap-[20px] list-none  text-[#00274D] font-medium ${showMenu ? "flex flex-col gap-[10px] justify-center items-center p-[10px]" : ""}`}
+          className={`${montserrat.className}  flex capitalize sm:flex-row text-[20px] sm:gap-[20px] list-none  text-[#00274D] font-medium ${showMenu ? "flex flex-col gap-[10px] justify-center items-center p-[10px]" : ""}`}
         >
-          <Link href="/" className="text-[16px]">
-            <span>Home</span>
-          </Link>
-          <Link href="/company" className="text-[16px]">
-            <span>Company</span>
-          </Link>
-          <Link href="/blog" className="text-[16px]">
-            <span>Blog</span>
-          </Link>
+          {links.map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`text-[16px] px-2 py-[10px] ${
+                  pathname === href ? "border-b-2 border-[#00274D]" : ""
+                }`}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

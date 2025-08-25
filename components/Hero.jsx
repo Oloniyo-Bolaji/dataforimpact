@@ -38,9 +38,7 @@ const Hero = () => {
     <div className="lg:h-screen sm:h-[1000px] h-[600px] bg-repeat bg-cover bg-center bg-[#ffffff] my-background p-[10px]">
       <div className="max-w-screen-xl hero mx-auto flex lg:justify-between justify-center items-center lg:flex-row sm:flex-row flex-col h-full lg:px-[60px] sm:px-[30px] px-[15px] my-[30px]">
         <div className="lg:max-w-lg sm:max-w-sm flex flex-col gap-[10px] lg:items-start sm:items-center items-center lg:text-left  sm:text-center text-center">
-          <h1
-            className="mt-[10px] sm:text-[50px] text-[35px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[50px] leading-[35px]"
-          >
+          <h1 className="mt-[10px] sm:text-[50px] text-[35px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[50px] leading-[35px]">
             Learn{" "}
             <span className="relative inline-block">
               <span className="relative z-10">Data</span>
@@ -62,7 +60,13 @@ const Hero = () => {
           </a>
         </div>
         <div className="lg:max-w-lg sm:max-w-sm">
-          <Image src="/dataanimated.png" alt="image" width={400} height={400} />
+          <Image
+            src="/dataanimated.png"
+            alt="image"
+            priority
+            width={400}
+            height={400}
+          />
         </div>
       </div>
     </div>
@@ -70,4 +74,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

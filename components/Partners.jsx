@@ -28,13 +28,13 @@ const Partners = () => {
             height={100}
             className="mx-8 h-auto w-auto"
           />
-           <Image
+          {/*<Image
             src="/buk.jpg"
             alt="Girl Up logo"
             width={200}
             height={100}
             className="mx-8 h-auto w-auto"
-          />
+          />*/}
         </Marquee>
       </div>
     </div>

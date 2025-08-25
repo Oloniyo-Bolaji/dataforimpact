@@ -106,6 +106,8 @@ const About = () => {
               <Image
                 src="/about2.png"
                 alt=""
+                sizes="auto"
+                priority
                 fill
                 className="object-cover rounded-full"
               />
@@ -116,6 +118,8 @@ const About = () => {
               <Image
                 src="/ai1.jpg"
                 alt=""
+                sizes="auto"
+                priority
                 fill
                 className="object-cover rounded-full"
               />
@@ -126,6 +130,8 @@ const About = () => {
               <Image
                 src="/about1.webp"
                 alt=""
+                sizes="auto"
+                priority
                 fill
                 className="object-cover rounded-full"
               />

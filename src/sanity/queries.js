@@ -40,3 +40,8 @@ export const getMentors = `*[_type == "mentor"]{
   profilePicture,
   linkedIn
 }`;
+
+export const getLatestReadyNewsletter = `*[_type == "newsletter" && status == "ready-to-send"] | order(_createdAt desc)[0]{
+    subject, 
+    content
+  }`;

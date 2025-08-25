@@ -11,7 +11,7 @@ const Loading = () => {
       ".loading",
       { scale: 0.5, opacity: 0 },
       {
-        scale: 1,
+        scale: 0.8,
         opacity: 1,
         duration: 1.5,
         ease: "power3.inOut",
