@@ -2,16 +2,11 @@
 
 import Image from "next/image";
 import React from "react";
-import { Montserrat } from "next/font/google";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 gsap.registerPlugin(useGSAP);
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 const About = () => {
   useGSAP(() => {
@@ -71,7 +66,7 @@ const About = () => {
             {/**mission statement */}
             <div className="flex flex-col gap-[10px]">
               <h4
-                className={`${montserrat.className} sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]`}
+                className="sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]"
               >
                 Our mission statement
               </h4>
@@ -86,7 +81,7 @@ const About = () => {
             {/**vision statement */}
             <div className="flex flex-col gap-[10px]">
               <h4
-                className={`${montserrat.className} sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]`}
+                className="sm:text-[16px] text-[16px] uppercase font-semibold text-[#008080]"
               >
                 Our vision statement
               </h4>

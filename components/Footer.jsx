@@ -8,17 +8,12 @@ import {
   FaSquareInstagram,
 } from "react-icons/fa6";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
-import { Montserrat } from "next/font/google";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 gsap.registerPlugin(ScrollToPlugin);
 function getSamePageAnchor(link) {
@@ -77,7 +72,7 @@ const Footer = () => {
         <div className="flex sm:flex-row flex-col justify-between sm:gap-[100px] gap-[10px] py-[20px] px-[10px]">
           <div className="flex flex-col gap-[20px]">
             <h1
-              className={`${montserrat.className} text-[20px] text-[#edeef2] font-bold`}
+              className="text-[20px] text-[#edeef2] font-bold"
             >
               Data for Impact
             </h1>
@@ -115,7 +110,7 @@ const Footer = () => {
 
           <div className="w-full">
             <h5
-              className={`${montserrat.className} text-[14px] text-[#edeef2] font-bold`}
+              className="text-[14px] text-[#edeef2] font-bold"
             >
               Quick Links
             </h5>
@@ -124,10 +119,10 @@ const Footer = () => {
                 <Link href="/#about">About Us</Link>
               </li>
               <li>
-                <Link href="/company#services">Services</Link>
+                <Link href="/#services">Services</Link>
               </li>
               <li>
-                <Link href="/company#mentors">Mentors</Link>
+                <Link href="/#mentors">Mentors</Link>
               </li>
               <li>
                 <Link href="/#faqs">FAQs</Link>

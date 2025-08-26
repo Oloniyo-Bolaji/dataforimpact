@@ -25,7 +25,7 @@ const MentorCard = ({ mentor }) => {
           {mentor.name}
         </h4>
         <h5 className="text-[#7a7a7a] text-[14px] text-center">
-          {mentor.title}
+          {mentor.position}
         </h5>
         <div className="flex gap-[20px] text-[15px]">
           <a href={mentor.linkedIn} className="text-[#0A66C2]">

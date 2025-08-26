@@ -3,13 +3,9 @@
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { faqs } from "@/lib/data";
-import { Montserrat } from "next/font/google";
 import Image from "next/image";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
+
 
 const FAQs = () => {
   const [openId, setOpenId] = useState(1);
@@ -26,7 +22,7 @@ const FAQs = () => {
             Frequently asked questions
           </h3>
           <p className="text-[#edeef270] sm:text-[15px] text-[13px]">
-            Get answers to your questions and learn more about our bootcamp, programs and registration process.
+            Get answers to your questions and learn more about us.
           </p>
         </div>
 

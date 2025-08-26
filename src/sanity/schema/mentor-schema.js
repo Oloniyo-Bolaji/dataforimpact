@@ -18,9 +18,16 @@ export default {
       },
     },
     {
-      name: "title",
-      title: "Title",
+      name: "position",
+      title: "Position",
       type: "string",
+    },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+      description:
+        "Set a number to control project display order (lower = higher priority)",
     },
     {
       name: "profilePicture",
@@ -32,6 +39,6 @@ export default {
       name: "linkedIn",
       title: "LinkedIn",
       type: "url",
-    }
+    },
   ],
 };

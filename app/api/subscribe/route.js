@@ -21,13 +21,15 @@ export async function POST(req) {
         .update(suscribersTable)
         .set({ isSubscribed: true })
         .where(eq(suscribersTable.email, email));
-      return NextResponse.json({ message: "You're back to being a suscriber 🎉" });
+      return NextResponse.json({
+        message: "You're back to being a suscriber 🎉",
+      });
     }
 
     const token = crypto.randomBytes(20).toString("hex");
     await db.insert(suscribersTable).values({ email, unsubscribeToken: token });
 
-    return NextResponse.json({ message: "Subscribed ✅" });
+    return NextResponse.json({ message: "Subscribed ✅", success: true });
   } catch (e) {
     console.error(e);
     return NextResponse.json({ error: "Server error" }, { status: 500 });

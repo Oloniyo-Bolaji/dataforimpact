@@ -32,11 +32,11 @@ export const getGraduates = `*[_type == "graduates"]{
   slug,
   picture,
 }`;
-export const getMentors = `*[_type == "mentor"]{
+export const getMentors = `*[_type == "mentor"] | order(order asc) {
   _id,
   name,
   slug,
-  title,
+  position,
   profilePicture,
   linkedIn
 }`;

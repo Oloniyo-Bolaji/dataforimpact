@@ -4,16 +4,11 @@ import ShareArticle from "@/reusable-components/ShareArticle";
 import { client } from "@/src/sanity/client";
 import { getArticle } from "@/src/sanity/queries";
 import { PortableText } from "next-sanity";
-import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import React from "react";
 
 const options = { next: { revalidate: 30 } };
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 const components = {
   types: {
@@ -107,7 +102,7 @@ const BlogContent = async ({ params }) => {
 
         <div>
           <h1
-            className={`${montserrat.className} mt-[10px] sm:text-[40px] text-[30px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[40px] leading-[30px]`}
+            className="mt-[10px] sm:text-[40px] text-[30px] text-[#00274D] sm:font-extrabold font-bold sm:leading-[40px] leading-[30px]"
           >
             {article.title}
           </h1>

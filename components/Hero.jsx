@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-import { Montserrat } from "next/font/google";
 import { FaArrowRight } from "react-icons/fa";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -10,10 +9,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
+
 
 const Hero = () => {
   useGSAP(() => {

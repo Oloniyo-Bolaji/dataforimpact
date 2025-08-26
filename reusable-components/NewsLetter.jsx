@@ -44,7 +44,7 @@ const NewsLetter = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email address"
-        className="input sm:w-[250px] w-full h-[50px] rounded-[10px] placeholder:text-[13px] outline-0 caret-[#edeef2] text-[#edeef2] p-[5px] box-border"
+        className="input sm:w-[250px] w-full h-[50px] rounded-[10px] placeholder:text-[13px] text-[13px] outline-0 caret-[#00274d] text-[#00274d] p-[5px] box-border"
       />
       <button
         type="submit"

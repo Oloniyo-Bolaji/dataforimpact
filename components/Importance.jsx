@@ -2,17 +2,13 @@
 
 import React, { useRef } from "react";
 import { services } from "@/lib/data";
-import { Montserrat } from "next/font/google";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 gsap.registerPlugin(useGSAP);
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
+
 
 export default function ServicesSection() {
   const radius = 320; // spacing for circular layout
@@ -76,7 +72,7 @@ export default function ServicesSection() {
                 </div>
                 <div>
                   <h3
-                    className={`${montserrat.className} capitalize font-bold text-[16px] text-[#008080]`}
+                    className="capitalize font-bold text-[16px] text-[#008080]"
                   >
                     {service.service}
                   </h3>
@@ -111,7 +107,7 @@ export default function ServicesSection() {
                   </div>
                   <div className="w-[80%] text-center">
                     <h3
-                      className={`${montserrat.className} capitalize font-bold text-[16px] text-[#008080]`}
+                      className="capitalize font-bold text-[16px] text-[#008080]"
                     >
                       {service.service}
                     </h3>
