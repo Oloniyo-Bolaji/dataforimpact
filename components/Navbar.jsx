@@ -21,7 +21,6 @@ const Navbar = () => {
   const links = [
     { href: "/", label: "Home" },
     { href: "/blog", label: "Blog" },
-    // { href: "/company", label: "Company" },
   ];
 
   const toggle = () => {
@@ -53,7 +52,7 @@ const Navbar = () => {
           onClick={() => {
             if (showMenu) setShowMenu(false);
           }}
-          className={`${montserrat.className}  flex capitalize sm:flex-row text-[20px] sm:gap-[20px] list-none  text-[#00274D] font-medium ${showMenu ? "flex flex-col gap-[10px] justify-center items-center p-[10px]" : ""}`}
+          className={`${montserrat.className} flex capitalize sm:flex-row text-[20px] sm:gap-[20px] list-none  text-[#00274D] font-medium ${showMenu ? "flex flex-col gap-[10px] justify-center items-center p-[10px] bg-white" : ""}`}
         >
           {links.map(({ href, label }) => (
             <li key={href}>
