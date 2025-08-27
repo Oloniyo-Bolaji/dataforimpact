@@ -57,7 +57,7 @@ const Hero = () => {
         </div>
         <div className="lg:max-w-lg sm:max-w-sm">
           <Image
-            src="/dataanimated.png"
+            src="/hero-image.png"
             alt="image"
             priority
             width={400}
