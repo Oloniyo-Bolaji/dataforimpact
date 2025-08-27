@@ -20,7 +20,7 @@ export default {
       name: "status",
       title: "Status",
       type: "string",
-      description: "Set status to 'ready-to-send' when the mail is ready to send.",
+      description: "Set status to 'ready-to-send' when the mail is ready to send 'sent' when mail is sent",
       options: {
         list: [
           { title: "Draft", value: "draft" },

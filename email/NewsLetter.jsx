@@ -1,6 +1,6 @@
 // emails/Newsletter.tsx
 import { Html } from "@react-email/html";
-import { PortableText } from "next-sanity";
+import { PortableText } from "@portabletext/react";
 
 const Newsletter = ({ subject, content, unsubscribeUrl }) => (
   <Html lang="en">

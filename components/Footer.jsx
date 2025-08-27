@@ -14,7 +14,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-
 gsap.registerPlugin(ScrollToPlugin);
 function getSamePageAnchor(link) {
   const { protocol, host, pathname, search } = window.location;
@@ -71,15 +70,14 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto flex flex-col px-[20px]">
         <div className="flex sm:flex-row flex-col justify-between sm:gap-[100px] gap-[10px] py-[20px] px-[10px]">
           <div className="flex flex-col gap-[20px]">
-            <h1
-              className="text-[20px] text-[#edeef2] font-bold"
-            >
+            <h1 className="text-[20px] text-[#edeef2] font-bold">
               Data for Impact
             </h1>
             <p className="text-[#edeef270] text-[15px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              efficitur orci vel lectus cursus, vel ultrices tortor interdum.
-              Aenean bibendum orci eu gravida vulputate.
+              We are a data-driven organization that empowers individuals and
+              organizations by building capacity, leveraging advanced analytics, AI,
+              and innovation, while translating complex data into actionable
+              insights for policy, advocacy, and sustainable impact.
             </p>
             <div className="flex gap-[10px] text-[20px] text-[#edeef2]">
               <a href="">
@@ -109,9 +107,7 @@ const Footer = () => {
           </div>
 
           <div className="w-full">
-            <h5
-              className="text-[14px] text-[#edeef2] font-bold"
-            >
+            <h5 className="text-[14px] text-[#edeef2] font-bold">
               Quick Links
             </h5>
             <ul className="flex flex-col gap-[5px] text-[#edeef270] text-[14px]">

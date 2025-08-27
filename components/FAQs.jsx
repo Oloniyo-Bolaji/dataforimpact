@@ -22,7 +22,7 @@ const FAQs = () => {
             Frequently asked questions
           </h3>
           <p className="text-[#edeef270] sm:text-[15px] text-[13px]">
-            Get answers to your questions and learn more about us.
+            Have questions? Here you'll find answers and clarification.
           </p>
         </div>
 
