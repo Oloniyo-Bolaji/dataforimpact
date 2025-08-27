@@ -24,13 +24,13 @@ export async function POST() {
     await Promise.all(
       subscribers.map((sub) =>
         resend.emails.send({
-          from: "Your Newsletter <onboarding@resend.dev>", // change later to verified domain
+          from: "Data for Impact <onboarding@resend.dev>", // change later to verified domain
           to: sub.email,
           subject: newsletter.subject,
           react: Newsletter({
             subject: newsletter.subject,
-            content: newsletter.content, // match your Sanity schema
-            unsubscribeUrl: `https://yourdomain.com/unsubscribe/${sub.unsubscribe_token}`, // update later
+            content: newsletter.content, 
+            unsubscribeUrl: `https://yourdomain.com/unsubscribe/${sub.unsubscribeToken}`, // update later
           }),
         })
       )

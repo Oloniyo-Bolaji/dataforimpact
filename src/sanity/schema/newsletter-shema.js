@@ -10,27 +10,27 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "content",
-      title: "Content",
-      type: "array",
-      of: [{ type: "block" }],
-      validation: (Rule) => Rule.required(),
-    },
-    {
       name: "status",
       title: "Status",
       type: "string",
-      description: "Set status to 'ready-to-send' when the mail is ready to send 'sent' when mail is sent",
+      description:
+        "Set status to 'ready-to-send' then Publish, email automatically gets sent to the subscribers",
       options: {
         list: [
           { title: "Draft", value: "draft" },
           { title: "Ready to Send", value: "ready-to-send" },
           { title: "Sent", value: "sent" },
         ],
-        layout: "radio", // makes it cleaner in Studio
+        layout: "radio", 
       },
       initialValue: "draft",
     },
-  ]
+    {
+      name: "content",
+      title: "Content",
+      type: "array",
+      of: [{ type: "block" }],
+      validation: (Rule) => Rule.required(),
+    },
+  ],
 };
-

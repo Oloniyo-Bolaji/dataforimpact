@@ -8,7 +8,6 @@ import Image from "next/image";
 import { urlFor } from "@/lib/imageBuilder";
 
 const GraduatesCard = ({ graduates }) => {
-  console.log(graduates)
   return (
     <div className="flex items-center justify-center h-[350px]">
       <div className="w-full max-w-md">

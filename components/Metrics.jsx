@@ -47,7 +47,7 @@ const Metrics = () => {
                 >
                   0
                 </h4>
-                <p className="text-[#7a7a7a]">{metric.title}</p>
+                <p className="text-[#7a7a7a] sm:text-[15px] text-[14px]">{metric.title}</p>
               </div>
             );
           })}
