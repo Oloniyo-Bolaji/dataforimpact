@@ -8,7 +8,6 @@ import Metrics from "@/components/Metrics";
 import Partners from "@/components/Partners";
 import Register from "@/components/Register";
 import Reviews from "@/components/Reviews";
-import Importance from "@/components/Importance";
 import Service from "@/components/Service";
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <Metrics />
       <About />
       <Service />
-      {/*<Importance />*/}
       <Partners />
       <Mentor />
       <FAQs />

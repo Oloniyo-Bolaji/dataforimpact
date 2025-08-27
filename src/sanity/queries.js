@@ -31,6 +31,7 @@ export const getGraduates = `*[_type == "graduates"]{
   name,
   slug,
   picture,
+  location,
 }`;
 export const getMentors = `*[_type == "mentor"] | order(order asc) {
   _id,

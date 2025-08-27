@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import  Newsletter  from "@/email/NewsLetter";
+import Newsletter from "@/email/NewsLetter";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/database";
 import { suscribersTable } from "@/lib/database/schema";
@@ -11,11 +11,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST() {
   try {
-    const newsletter = await client.fetch(
-      getLatestReadyNewsletter,
-      {},
-      options
-    );
+    const newsletter = await client.fetch(getLatestReadyNewsletter);
     const subscribers = await db.select().from(suscribersTable);
 
     if (!subscribers || subscribers.length === 0) {
@@ -25,18 +21,20 @@ export async function POST() {
       );
     }
 
-    for (const sub of subscribers) {
-      await resend.emails.send({
-        from: "Your Newsletter <onboarding@resend.dev>", // Change to your verified domain later
-        to: sub.email,
-        subject: newsletter.subject,
-        react: Newsletter({
+    await Promise.all(
+      subscribers.map((sub) =>
+        resend.emails.send({
+          from: "Your Newsletter <onboarding@resend.dev>", // change later to verified domain
+          to: sub.email,
           subject: newsletter.subject,
-          body: newsletter.body,
-          unsubscribeUrl: `https://yourdomain.com/unsubscribe/${sub.unsubscribe_token}`, //change the yourdomain.com after buying domain
-        }),
-      });
-    }
+          react: Newsletter({
+            subject: newsletter.subject,
+            content: newsletter.content, // match your Sanity schema
+            unsubscribeUrl: `https://yourdomain.com/unsubscribe/${sub.unsubscribe_token}`, // update later
+          }),
+        })
+      )
+    );
 
     return NextResponse.json({
       success: true,
